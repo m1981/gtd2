@@ -29,7 +29,7 @@ Każdy termin ma jedno znaczenie w całej specyfikacji (przypadki użycia, EARS,
 | --- | --- | --- |
 | **G-AKT-01 GTD-App** (GTD-App) | System oprogramowania objęty specyfikacją, przechowujący Elementy jednego Użytkownika i wykonujący na nich Operacje. | Metoda GTD (sposób pracy, nie oprogramowanie) |
 | G-AKT-02 **Użytkownik** (User) | Osoba posiadająca konto w GTD-App, właściciel wszystkich swoich Elementów. Jedyny aktor główny inicjujący Operacje. W wersji 1.0 konto ma dokładnie jednego Użytkownika. | Delegat |
-| G-AKT-03 **Delegat** (Delegate) | Osoba, której Użytkownik powierzył wykonanie Działania. Nie ma konta i nie wchodzi w interakcję z GTD-App; w systemie występuje wyłącznie jako Etykieta rodzaju Osoba. | Użytkownik; Kontekst „osoba” |
+| G-AKT-03 **Delegat** (Delegate) | Osoba, której Użytkownik powierzył wykonanie Działania. Nie ma konta i nie wchodzi w interakcję z GTD-App; w systemie występuje wyłącznie jako Kontekst typu Osoba \[G-ETK-02\]. | Użytkownik; Kontekst „osoba” |
 | G-AKT-04 **Czas** (Scheduler) | Aktor systemowy generujący zdarzenia w określonych momentach (np. upływ 7 dni od Przeglądu tygodniowego). | Data wykonania (atrybut, nie aktor) |
 | G-AKT-05 **Kalendarz zewnętrzny** (External Calendar) | System trzeci, z którym GTD-App wymienia Działania zaplanowane i odczytuje wydarzenia. Aktor wspierający. | Widok kalendarza w GTD-App |
 | G-AKT-06 **Serwer poczty** (Mail Server) | System trzeci dostarczający wiadomości przekazane przez Użytkownika na adres Przechwycenia. Aktor wspierający. | — |
@@ -55,7 +55,7 @@ G-ELM-11 **Działanie** (Action) to Element opisujący jedną fizyczną, widoczn
 
 G-ELM-12 **Otwarte działanie** (Open Action) to Działanie w Stanie Następne działanie, Zaplanowane lub Czekam na.
 
-G-ELM-13 **Widok** (View) to filtrowane zestawienie Elementów według Stanu i atrybutów (np. Następne działania z Kontekstem @telefon). Wyświetlenie Widoku nie zmienia żadnego Elementu. Każdy atrybut Elementu i Projektu (Stan, Projekt, Obszar odpowiedzialności, Etykieta, Delegat, każda data, Szacowany czas, Wymagana energia) może być kryterium filtrowania Widoku, także w połączeniu z innymi.
+G-ELM-13 **Widok** (View) to filtrowane zestawienie Elementów według Stanu i atrybutów (np. Następne działania z Kontekstem @telefon). Wyświetlenie Widoku nie zmienia żadnego Elementu. Każdy atrybut Elementu i Projektu (Stan, Projekt, Obszar odpowiedzialności, Kontekst, Typ Kontekstu, Kategoria Miejsca, Charakter Działania, Delegat, każda data, Szacowany czas, Wymagana energia) może być kryterium filtrowania Widoku, także w połączeniu z innymi.
 
 G-ELM-14 **Inbox** (Inbox) to Widok Elementów w Stanie W Inboxie. **G-ELM-15 Pusty Inbox (Empty Inbox)** oznacza zero Elementów w tym Stanie.
 
@@ -81,7 +81,7 @@ G-PRJ-08 **Obszar odpowiedzialności** (Area of Focus) to sfera życia lub pracy
 
 | Atrybut | Definicja | Dziedzina wartości | Krotność |
 | --- | --- | --- | --- |
-| G-ATR-01 **Kontekst** (Context) | Warunek konieczny do wykonania Działania: miejsce, narzędzie lub osoba. | Etykieta rodzaju Kontekst (np. @telefon, @dom) lub Osoba (np. @Marek) | 0..\* |
+| G-ATR-01 **Kontekst** (Context) | Warunek konieczny do wykonania Działania, sprawdzalny obserwacją chwili (teraz prawda albo fałsz). Ma dokładnie jeden Typ Kontekstu \[G-ETK-05\]. Synonim: Etykieta. | Kontekst zdefiniowany przez Użytkownika (np. @dom, @Castorama, @wiertarka, @Marek, @pogoda) | 0..\* |
 | G-ATR-02 **Szacowany czas** (Time Estimate) | Przewidywany czas potrzebny na wykonanie Działania. | Liczba całkowita minut > 0 | 0..1 |
 | G-ATR-03 **Wymagana energia** (Energy Level) | Poziom koncentracji i wysiłku potrzebny do wykonania Działania. „Wysiłek” jest synonimem tego atrybutu, nie osobnym pojęciem. | niska / średnia / wysoka | 0..1 |
 | G-ATR-04 **Data wykonania** (Scheduled Date) | Dzień lub dzień z godziną, w którym Działanie musi zostać wykonane i ani wcześniej, ani później nie ma sensu. Jej obecność oznacza Stan Zaplanowane. | Data lub data + godzina | 0..1 |
@@ -92,13 +92,28 @@ G-PRJ-08 **Obszar odpowiedzialności** (Area of Focus) to sfera życia lub pracy
 
 *Nie mylić:* Kontekst „@Marek” oznacza, że do wykonania Działania potrzebna jest obecność Marka (np. temat na spotkanie). Delegat Marek oznacza, że to Marek wykonuje Działanie.
 
-G-ETK-01 **Etykieta** (Label) to nazwana wartość z listy definiowanej przez Użytkownika, przypisywana Działaniom. Ma dokładnie jeden rodzaj: **Kontekst** albo **Osoba**. Nazwa Etykiety jest unikalna w obrębie konta, bez rozróżniania wielkości liter.
+G-ATR-09 **Charakter Działania** (Action Nature) to jakościowa cecha samego Działania, która wpływa na wybór momentu wykonania, ale nie jest ani Kontekstem (warunkiem świata), ani kosztem (G-ATR-02, G-ATR-03). Wartości definiuje Użytkownik (np. brudna robota, głośna praca). Krotność 0..\*. *Nie mylić z:* Kontekst typu Okoliczność (stan świata, np. dobra pogoda).
 
-G-ETK-02 **Osoba** (Person) to Etykieta oznaczająca człowieka spoza GTD-App. Ta sama Osoba może być Delegatem jednego Działania i Kontekstem innego.
+G-ETK-01 **Etykieta** (Label) to synonim Kontekstu \[G-ATR-01\] używany w interfejsie. Nie jest osobnym pojęciem. Nazwa Kontekstu jest unikalna w obrębie konta, bez rozróżniania wielkości liter.
 
-G-ETK-03 **Wybór Etykiety** (Label Picker): przy edycji Działania Użytkownik wybiera Etykietę z listy istniejących. Gdy wpisze nazwę nieistniejącą, GTD-App proponuje utworzenie nowej Etykiety i tworzy ją dopiero po potwierdzeniu.
+G-ETK-05 **Typ Kontekstu** (Context Type) to klasyfikacja Kontekstu według tego, jaki warunek opisuje. Każdy Kontekst ma dokładnie jeden Typ:
 
-G-ETK-04 **Widok etykiet** (Labels View) to Widok wszystkich Etykiet z liczbą przypisanych Otwartych działań. Wybranie Etykiety otwiera Widok jej Działań.
+| Typ | Warunek | Przykłady |
+| --- | --- | --- |
+| G-ETK-06 **Miejsce** (Place) | gdzie Użytkownik musi być, w tym sklep internetowy | @dom, @NaMieście, @Castorama, @Allegro |
+| G-ETK-07 **Narzędzie** (Tool) | co Użytkownik musi mieć przy sobie | @komputer, @telefon, @wiertarka |
+| G-ETK-02 **Osoba** (Person) | kto musi być dostępny; osoba spoza GTD-App | @Marek, @Gosia |
+| G-ETK-08 **Okoliczność** (Circumstance) | stan świata, na który Użytkownik nie ma wpływu | @pogoda |
+
+Ta sama Osoba może być Delegatem \[G-AKT-03\] jednego Działania i Kontekstem innego.
+
+G-ETK-09 **Kategoria Miejsca** (Place Category) to opcjonalne grupowanie Kontekstów typu Miejsce (np. Sklep). Krotność 0..1 na Miejsce. Służy filtrowaniu, np. wszystkie Miejsca kategorii Sklep.
+
+G-ETK-10 **Reguła dopasowania Kontekstów** (Context Matching Rule): Działanie pasuje do bieżącej sytuacji, gdy pasuje co najmniej jedno z jego Miejsc (LUB) oraz wszystkie jego Konteksty pozostałych Typów (I). Działanie bez Miejsca pasuje w każdym Miejscu.
+
+G-ETK-03 **Wybór Kontekstu** (Label Picker): przy edycji Działania Użytkownik wybiera Kontekst z listy istniejących. Gdy wpisze nazwę nieistniejącą, GTD-App proponuje utworzenie nowego Kontekstu, prosi o jego Typ i tworzy go dopiero po potwierdzeniu.
+
+G-ETK-04 **Widok Kontekstów** (Contexts View) to Widok wszystkich Kontekstów pogrupowanych według Typu, z liczbą przypisanych Otwartych działań, z filtrem po Typie i Kategorii Miejsca. Wybranie Kontekstu otwiera Widok jego Działań.
 
 ## Operacje
 
