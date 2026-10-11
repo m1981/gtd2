@@ -4,13 +4,18 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-Brak otwartych decyzji.
+| ID | Decyzja | Opcje | Propozycja |
+| --- | --- | --- | --- |
+| D-30 | Data kontroli przy Czekam na (ZP-01) | A) bez powiadomień; przy zaległym Działaniu wezwania „Skontaktuj się” i „Przesuń kontrolę” · B) dodatkowo powiadomienie w dniu kontroli · C) bez zmian | A |
+| D-31 | Przygotowanie przed Datą wykonania | A) „Przygotuj się” z wyprzedzeniem, domyślnie 2 dni, ustawialne · B) tylko przy samym Działaniu | A |
+| D-32 | Niepusty Inbox | A) wezwanie „Opróżnij Inbox (N)” na ekranie głównym · B) tylko licznik | A |
+| D-33 | Reguła 2 minut w Doprecyzowaniu | A) „Zrób teraz” jako pierwsza opcja · B) bez wyróżnienia | A |
+| D-34 | Przegląd tygodniowy | A) tryb prowadzony: Punkt po Punkcie, z otwarciem właściwego Widoku · B) checklista do samodzielnego odhaczania | A |
 
 ## W kolejce
 
 | ID | Temat |
 | --- | --- |
-| K-09 | Przegląd wcześniejszych decyzji pod kątem ZP-01 (np. Data kontroli bez powiadomienia) |
 | K-07 | Pozycja wspólna dla kilku Działań |
 | K-08 | Ponowne odznaczenie Pozycji (np. zużyta) |
 | K-06 | Poprawka znacznika „\[P\]” w pliku kontraktu |
