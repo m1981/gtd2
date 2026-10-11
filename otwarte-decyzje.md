@@ -4,7 +4,11 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-Brak otwartych decyzji.
+| ID | Decyzja | Opcje | Propozycja |
+| --- | --- | --- | --- |
+| D-35 | Ekran „Projekt zakończony” (E-19) bez wezwania | A) „Przejrzyj Kiedyś/może” · B) „Pokaż Projekty Utknięte” · C) bez wezwania | B |
+| D-36 | Przechwyć (E-02) bez kroku naprzód | A) celowy wyjątek od ZP-01: przechwycenie ma być szybkie · B) po zapisie opcja „Doprecyzuj teraz” | A |
+| D-37 | Skład paska nawigacji | A) Start · Inbox · Działania · Projekty · Konteksty · (+) · B) inny skład | A |
 
 ## W kolejce
 
