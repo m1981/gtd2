@@ -6,11 +6,10 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Opcje | Propozycja |
 | --- | --- | --- | --- |
-| D-18 | Gotowość Działania w modelu (po analizie) | A) atrybut wyliczany, Stany bez zmian · B) nowy Stan Elementu „Przygotowywane” | A |
-| D-19 | Projekt, którego jedynym krokiem jest przygotowanie (doprecyzowanie) | A) Utknięty + wezwanie „Przygotuj się” przy Projekcie · B) nowy wyliczany status „Wymaga przygotowania” z tym wezwaniem; Utknięty tylko bez żadnego kroku | B |
-| D-21 | Narzędzie a Pozycja do Skompletowania | A) Kontekst Narzędzie tylko dla rzeczy zawsze przy sobie; rzeczy z domu to Pozycje · B) narzędzia z domu zostają Kontekstem i trafiają do Widoku przygotowania automatycznie | A |
-| D-22 | Pozycje do Zakupu w Widoku Kontekstów sklepu | A) tak, w sklepie widać Pozycje ze wszystkich Działań · B) tylko w Widoku przygotowania danego Działania | A |
-| D-23 | Przygotowanie jako przypadek użycia | A) nowy cel „Przygotować Działanie” (UC-04) · B) rozszerzenie „Wybrać i wykonać Następne działanie” | A |
+| D-21 | Narzędzie a rzecz z domu do skompletowania (po wyjaśnieniu) | A) Kontekst Narzędzie tylko dla rzeczy zawsze przy sobie; rzeczy przynoszone przed zadaniem to Pozycje do Skompletowania · B) wszystkie narzędzia jako Kontekst, Widok przygotowania pokazuje je jako checklistę | A |
+| D-24 | Domyślny zakres Widoku przygotowania otwartego z Działania | A) to Działanie, przełącznik „Wszystkie” · B) wszystkie Działania nieprzygotowane | A |
+| D-25 | Układ Widoku Kontekstu sklepu | A) dwie sekcje: „Do kupienia” (Pozycje) nad „Działania” · B) jedna wspólna lista | A |
+| D-26 | Wezwanie przy Projekcie Utkniętym (ZP-01) | A) „Zdefiniuj następne działanie” przy Projekcie · B) tylko oznaczenie Utknięty | A |
 
 ## W kolejce
 
@@ -30,12 +29,16 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-23 | Przygotowanie jako przypadek użycia | nowy cel UC-04 Przygotować Działanie | 2026-10-11 |
+| D-22 | Pozycje do Zakupu w Widoku Kontekstów sklepu | własna odpowiedź: w Widoku przygotowania przełącznik „to Działanie / wszystkie”; od strony Kontekstu sklepu od razu wszystkie (jak widok etykiety w Todoist) | 2026-10-11 |
+| D-19 | Projekt, którego jedynym krokiem jest przygotowanie | status wyliczany „Wymaga przygotowania” (G-PRJ-09); Utknięty tylko bez żadnego kroku | 2026-10-11 |
+| D-18 | Gotowość Działania w modelu | atrybut wyliczany (G-PRZ-06), Stany bez zmian | 2026-10-11 |
 | ZP-01 | Zasada projektowa | System prowadzi do postępu, nie jest biernym rejestrem (Drive the user home) | 2026-10-11 |
-| D-20 | Zakupy jako przypadek użycia | własna odpowiedź: kliknięcie Działania pokazuje listę zakupów, pod nią rzeczy z domu do skompletowania; dalej D-21…D-23 | 2026-10-11 |
-| D-17 | Widoczność Działania nieprzygotowanego | widoczne, z wezwaniem „Przygotuj się” otwierającym Widok przygotowania (G-PRZ-04, G-PRZ-05) | 2026-10-11 |
+| D-20 | Zakupy jako przypadek użycia | własna odpowiedź: kliknięcie Działania pokazuje listę zakupów, pod nią rzeczy z domu; dalej D-21…D-23 | 2026-10-11 |
+| D-17 | Widoczność Działania nieprzygotowanego | widoczne, z wezwaniem „Przygotuj się” (G-PRZ-04, G-PRZ-05) | 2026-10-11 |
 | D-16 | Czym jest Pozycja przygotowania | lekki punkt listy, nie Element (G-PRZ-02) | 2026-10-11 |
 | D-15 | Osoba w modelu | Kontekst typu Osoba; Etykieta to synonim Kontekstu | 2026-10-11 |
-| D-14 | Jak opisać zakupy | własny pomysł: Lista przygotowania (mise en place) jako kryterium startu; rozbite na D-16…D-20 | 2026-10-11 |
+| D-14 | Jak opisać zakupy | własny pomysł: Lista przygotowania jako kryterium startu; rozbite na D-16…D-20 | 2026-10-11 |
 | D-13 | Gdzie „brudna robota” | Charakter Działania (G-ATR-09) | 2026-10-11 |
 | D-12 | Logika filtrowania kilku Kontekstów | Miejsca LUB, pozostałe Typy I (G-ETK-10) | 2026-10-11 |
 | D-11 | Jeden model warunków wykonania | Kontekst z Typami Miejsce, Narzędzie, Osoba, Okoliczność | 2026-10-11 |

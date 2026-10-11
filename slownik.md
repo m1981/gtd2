@@ -79,6 +79,8 @@ G-PRJ-02 **Rezultat** (Outcome) to obowiązkowy atrybut Projektu: opis stanu św
 
 Działanie w Stanie Czekam na liczy się jako Otwarte działanie, więc Projekt czekający wyłącznie na Delegata nie jest Utknięty.
 
+G-PRJ-09 **Wymaga przygotowania** (Needs Preparation) to status wyliczany Projektu Aktywnego, którego wszystkie Otwarte działania mają Gotowość Nieprzygotowane \[G-PRZ-06\]. Taki Projekt nie jest Utknięty. GTD-App pokazuje przy nim wezwanie „Przygotuj się” (ZP-01).
+
 G-PRJ-08 **Obszar odpowiedzialności** (Area of Focus) to sfera życia lub pracy, w której Użytkownik utrzymuje stały standard (np. Zdrowie, Finanse, Zespół). Nie ma Rezultatu i nigdy nie zostaje Zakończony. Grupuje 0..\* Projektów i 0..\* Działań spoza Projektów. *Nie mylić z:* Projekt, Kontekst.
 
 ## Atrybuty Działań
@@ -117,7 +119,7 @@ G-ETK-10 **Reguła dopasowania Kontekstów** (Context Matching Rule): Działanie
 
 G-ETK-03 **Wybór Kontekstu** (Label Picker): przy edycji Działania Użytkownik wybiera Kontekst z listy istniejących. Gdy wpisze nazwę nieistniejącą, GTD-App proponuje utworzenie nowego Kontekstu, prosi o jego Typ i tworzy go dopiero po potwierdzeniu.
 
-G-ETK-04 **Widok Kontekstów** (Contexts View) to Widok wszystkich Kontekstów pogrupowanych według Typu, z liczbą przypisanych Otwartych działań, z filtrem po Typie i Kategorii Miejsca. Wybranie Kontekstu otwiera Widok jego Działań.
+G-ETK-04 **Widok Kontekstów** (Contexts View) to Widok wszystkich Kontekstów pogrupowanych według Typu, z liczbą przypisanych Otwartych działań, z filtrem po Typie i Kategorii Miejsca. Wybranie Kontekstu otwiera Widok jego Działań; dla Miejsca kategorii Sklep Widok pokazuje także nieodhaczone Pozycje do Zakupu ze wszystkich Działań \[G-PRZ-03\].
 
 ## Przygotowanie
 
@@ -127,9 +129,11 @@ G-PRZ-02 **Pozycja przygotowania** (Preparation Item) to punkt Listy przygotowan
 
 G-PRZ-03 **Sposób pozyskania** (Acquisition Mode) Pozycji ma jedną z dwóch wartości. **Zakup**: Pozycja ma 1..\* Miejsc \[G-ETK-06\] kategorii Sklep, traktowanych jako alternatywa (LUB, jak w G-ETK-10). **Skompletowanie**: rzecz posiadana przez Użytkownika, do zebrania z domu lub innego Miejsca.
 
-G-PRZ-04 **Działanie nieprzygotowane** (Unprepared Action) to Działanie z co najmniej jedną nieodhaczoną Pozycją przygotowania. Pozostaje widoczne w Widokach Następnych działań, z wezwaniem do działania „Przygotuj się” (ZP-01).
+G-PRZ-04 **Działanie nieprzygotowane** (Unprepared Action) to Działanie o Gotowości Nieprzygotowane \[G-PRZ-06\]. Pozostaje widoczne w Widokach Następnych działań, z wezwaniem do działania „Przygotuj się” (ZP-01).
 
-G-PRZ-05 **Widok przygotowania** (Preparation View) to Widok jednej Listy przygotowania, otwierany wezwaniem „Przygotuj się”. Pokazuje najpierw Pozycje do Zakupu pogrupowane według sklepu, pod nimi Pozycje do Skompletowania. Użytkownik odhacza w nim Pozycje.
+G-PRZ-05 **Widok przygotowania** (Preparation View) to Widok jednej Listy przygotowania, otwierany wezwaniem „Przygotuj się”. Pokazuje najpierw Pozycje do Zakupu pogrupowane według sklepu, pod nimi Pozycje do Skompletowania. Ma przełącznik zakresu: to Działanie albo wszystkie Działania nieprzygotowane. Użytkownik odhacza w nim Pozycje.
+
+G-PRZ-06 **Gotowość Działania** (Readiness) to atrybut wyliczany Działania o dwóch wartościach. **Przygotowane**: Działanie nie ma Listy przygotowania albo wszystkie jej Pozycje są odhaczone. **Nieprzygotowane**: w przeciwnym razie. Gotowość jest niezależna od Stanu (Działanie może być jednocześnie Zaplanowane i Nieprzygotowane). Użytkownik jej nie ustawia.
 
 ## Operacje
 
@@ -199,3 +203,13 @@ Użytkownik \[G-AKT-02\] przegląda po kolei Elementy \[G-ELM-01\] w Stanie W In
 - *Gwarancja minimalna:* żaden Element nie zostaje utracony; każdy ma po przerwaniu albo nowy Stan, albo nadal W Inboxie.
 - *Ślad:* CLR-01, CLR-02, CLR-03.
 - *Kolejność:* GTD-App prezentuje Elementy od najstarszego (według chwili Przechwycenia \[G-OPR-02\]). Elementy przechwycone w trakcie (UC-01) dołączają na koniec bieżącego opróżniania.
+
+### UC-04 Przygotować Działanie
+
+*Poziom:* cel użytkownika (morze) · *Zakres:* G-AKT-01 GTD-App · *Aktor główny:* G-AKT-02 Użytkownik · *Wyzwalacz:* wezwanie „Przygotuj się” przy Działaniu nieprzygotowanym \[G-PRZ-04\] lub Projekcie \[G-PRJ-09\], albo wejście w Widok Kontekstu sklepu \[G-ETK-04\]
+
+Użytkownik \[G-AKT-02\] otwiera Widok przygotowania \[G-PRZ-05\] i odhacza Pozycje przygotowania \[G-PRZ-02\] w miarę ich zdobywania: Pozycje do Zakupu w sklepach, Pozycje do Skompletowania w domu \[G-PRZ-03\]. Po każdym odhaczeniu GTD-App przelicza Gotowość Działania \[G-PRZ-06\]. Przypadek kończy się sukcesem, gdy Gotowość zmienia się na Przygotowane; GTD-App pokazuje wtedy przy Działaniu wezwanie „Zacznij” (ZP-01). Użytkownik może przerwać w dowolnym momencie; odhaczenia zostają zachowane.
+
+- *Warianty wejścia:* z Działania (zakres: to Działanie), z Projektu, ze sklepu (zakres: wszystkie Działania, Miejsce = ten sklep).
+- *Ślad:* G-PRZ-01…06, G-PRJ-09; decyzje D-16…D-23.
+- *Do rozstrzygnięcia:* domyślny zakres Widoku przygotowania (D-24), układ Widoku Kontekstu sklepu (D-25).
