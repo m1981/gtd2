@@ -6,7 +6,8 @@ Reguły:
   R3 Wyjście z modala - każdy modal ma krawędź wyjścia (-.->) do ekranu spoza modali.
   R4 ZP-01 sukces     - każdy ekran sukcesu ma wezwanie (==>) do dalszej pracy.
   R5 ZP-01 wycieki    - ekrany, z których wychodzi się tylko wyjściem/powrotem,
-                        bez żadnego kroku naprzód (miejsca bez następnego kroku).
+                        bez żadnego kroku naprzód; świadome wyjątki deklaruje
+                        komentarz `%% wyjatek-zp01: ID (decyzja)`.
   R6 Elastyczność     - najkrótsze ścieżki (liczba kliknięć) dla par kluczowych.
 Ekrany klasy `ekran` mają pasek nawigacji, więc dostają niejawną krawędź do NAV.
 Użycie: python3 sprawdz.py ekrany.mmd
@@ -17,6 +18,7 @@ from collections import deque
 
 EDGE = re.compile(r'^\s*(\w+)\s*(-->|==>|-\.->)\s*(?:\|"?(.*?)"?\|)?\s*(\w+)\s*$')
 CLASS = re.compile(r'^\s*class\s+([\w,]+)\s+(\w+)\s*$')
+WYJATEK = re.compile(r'^\s*%%\s*wyjatek-zp01:\s*(\w+)\s*(.*)$')
 NODE = re.compile(r'^\s*(\w+)\s*[\[\(\/]+"?([^"\]\)]*)')
 
 KLUCZOWE = [
@@ -33,8 +35,12 @@ KLUCZOWE = [
 
 
 def wczytaj(path):
-    krawedzie, klasy, nazwy = [], {}, {}
+    krawedzie, klasy, nazwy, wyjatki = [], {}, {}, {}
     for line in open(path, encoding="utf-8"):
+        m = WYJATEK.match(line)
+        if m:
+            wyjatki[m.group(1)] = m.group(2).strip()
+            continue
         if line.strip().startswith("%%"):
             continue
         m = EDGE.match(line)
@@ -49,7 +55,7 @@ def wczytaj(path):
         m = NODE.match(line)
         if m and not line.strip().startswith(("classDef", "flowchart")):
             nazwy[m.group(1)] = m.group(2).strip()
-    return krawedzie, klasy, nazwy
+    return krawedzie, klasy, nazwy, wyjatki
 
 
 def graf(krawedzie, klasy):
@@ -86,7 +92,7 @@ def kroki(g, a, b):
 
 
 def main(path):
-    kr, kl, nazwy = wczytaj(path)
+    kr, kl, nazwy, wyj = wczytaj(path)
     g = graf(kr, kl)
     ekrany = [n for n in g if n != "NAV" and kl.get(n) != "zewn"]
     nm = lambda n: nazwy.get(n, n)
@@ -119,7 +125,7 @@ def main(path):
     r5 = []
     for n in ekrany:
         wych = [(t, b) for a, t, _, b in kr if a == n and b != n]
-        if wych and all(t == "-.->" for t, _ in wych):
+        if wych and all(t == "-.->" for t, _ in wych) and n not in wyj:
             r5.append(n)
     wyniki.append(("R5 ZP-01: miejsca bez kroku naprzód", r5))
 
@@ -127,13 +133,15 @@ def main(path):
     print("| --- | --- | --- |")
     for r, lista in wyniki:
         print(f"| {r} | {'OK' if not lista else 'UWAGA'} | {', '.join(nm(x) for x in lista) or '—'} |")
+    if wyj:
+        print(f"| Świadome wyjątki od ZP-01 | INFO | {', '.join(nm(x) + ' ' + d for x, d in wyj.items())} |")
     print()
     print("| R6 Para | Kliknięcia |")
     print("| --- | --- |")
     for a, b, opis in KLUCZOWE:
         k = kroki(g, a, b)
         print(f"| {opis} | {k if k is not None else 'brak ścieżki'} |")
-    return 1 if any(l for r, l in wyniki if not r.startswith("R5")) else 0
+    return 1 if any(l for _, l in wyniki) else 0
 
 
 if __name__ == "__main__":

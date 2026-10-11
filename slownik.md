@@ -4,7 +4,7 @@ Oct 10, 2026 · @Michał
 
 ## Zasady projektowe
 
-**ZP-01 Prowadzenie do postępu** (Drive the user home). GTD-App nie jest biernym rejestrem. Wszędzie, gdzie może wskazać Użytkownikowi następny krok, proponuje go aktywnie jako wezwanie do działania (np. „Przygotuj się”), zamiast tylko oznaczać stan.
+**ZP-01 Prowadzenie do postępu** (Drive the user home). GTD-App nie jest biernym rejestrem. Wszędzie, gdzie może wskazać Użytkownikowi następny krok, proponuje go aktywnie jako wezwanie do działania (np. „Przygotuj się”), zamiast tylko oznaczać stan. Wyjątek: Przechwycenie \[G-OPR-02\] kończy się bez wezwania, bo ma być błyskawiczne (D-36).
 
 ## Zasady słownika
 
@@ -148,7 +148,7 @@ G-OPR-01 Operacja (Operation) to czynność Użytkownika lub GTD-App zmieniając
 | G-OPR-06 **Przekształcenie w Projekt** (Convert to Project) | Wynik Doprecyzowania: utworzenie Projektu, którego Rezultat powstaje z treści Elementu, wraz z ≥1 Otwartym działaniem. Element przechwycony przestaje istnieć. | W Inboxie → (Projekt Aktywny) |
 | G-OPR-07 **Delegowanie** (Delegate) | Powierzenie Działania Delegatowi z zapisem Daty delegowania. Możliwe z Doprecyzowania lub z Następnego działania. GTD-App nie powiadamia Delegata. | W Inboxie / Następne działanie → Czekam na |
 | G-OPR-08 **Zakończenie Działania** (Complete Action) | Oznaczenie Otwartego działania jako wykonanego. | Otwarte działanie → Zakończony |
-| G-OPR-09 **Zakończenie Projektu** (Complete Project) | Uznanie Rezultatu Projektu za osiągnięty. Jedno potwierdzenie Użytkownika zmienia Stan wszystkich Otwartych działań Projektu na Zakończony. | Aktywny / Utknięty → Zakończony |
+| G-OPR-09 **Zakończenie Projektu** (Complete Project) | Uznanie Rezultatu Projektu za osiągnięty. Jedno potwierdzenie Użytkownika zmienia Stan wszystkich Otwartych działań Projektu na Zakończony. Potem GTD-App pokazuje wezwanie „Pokaż Projekty Utknięte” (ZP-01, D-35). | Aktywny / Utknięty → Zakończony |
 | G-OPR-10 **Przeniesienie do Kosza** (Trash) | Odrzucenie Elementu lub Projektu z możliwością przywrócenia. | dowolny → W Koszu |
 | G-OPR-11 **Przywrócenie** (Restore) | Cofnięcie Przeniesienia do Kosza. | W Koszu → Stan sprzed Przeniesienia |
 | G-OPR-12 **Trwałe usunięcie** (Permanent Delete) | Nieodwracalne usunięcie Elementu lub Projektu z GTD-App, wyłącznie na polecenie Użytkownika. GTD-App nigdy nie usuwa trwale automatycznie. | W Koszu → brak |

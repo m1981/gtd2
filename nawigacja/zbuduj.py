@@ -15,8 +15,8 @@ def md_to_table(rows):
     for r in rows[1:]:
         out.append("<tr>")
         for c in r:
-            if c in ("OK", "UWAGA"):
-                cls = "ok" if c == "OK" else "warn"
+            if c in ("OK", "UWAGA", "INFO"):
+                cls = {"OK": "ok", "UWAGA": "warn", "INFO": "info"}[c]
                 out.append(f'<td><span class="pill {cls}">{c}</span></td>')
             elif re.fullmatch(r"\d+|brak ścieżki", c):
                 out.append(f'<td class="num">{c}</td>')

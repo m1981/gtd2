@@ -32,7 +32,7 @@ th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; colo
 td.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
 .tbl { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
 .pill { font: 600 0.75rem/1 var(--f-mono); padding: 4px 8px; border-radius: 999px; white-space: nowrap; }
-.pill.ok { color: var(--ok); background: var(--ok-bg); } .pill.warn { color: var(--warn); background: var(--warn-bg); }
+.pill.ok { color: var(--ok); background: var(--ok-bg); } .pill.info { color: var(--muted); background: var(--bg); border: 1px solid var(--line); } .pill.warn { color: var(--warn); background: var(--warn-bg); }
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
 .cols > * { min-width: 0; }
 code, .id { font-family: var(--f-mono); font-size: 0.85em; }
@@ -42,7 +42,7 @@ code, .id { font-family: var(--f-mono); font-size: 0.85em; }
 <div class="wrap">
   <header>
     <h1>Mapa nawigacji GTD-App</h1>
-    <p class="lead">Ekrany i przejścia według specyfikacji po decyzji D-34. Skrypt <code>sprawdz.py</code> czyta ten sam plik Mermaid i sprawdza, czy nie ma pułapek, czy każdy przepływ kończy się następnym krokiem (ZP-01) i ile kliknięć dzieli kluczowe ekrany.</p>
+    <p class="lead">Ekrany i przejścia według specyfikacji po decyzji D-34. Skrypt <code>sprawdz.py</code> czyta ten sam plik Mermaid i sprawdza, czy nie ma pułapek, czy każdy przepływ kończy się następnym krokiem (ZP-01, poza świadomymi wyjątkami) i ile kliknięć dzieli kluczowe ekrany.</p>
   </header>
 
   <div class="legend" aria-label="Legenda">

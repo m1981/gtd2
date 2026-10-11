@@ -4,11 +4,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-| ID | Decyzja | Opcje | Propozycja |
-| --- | --- | --- | --- |
-| D-35 | Ekran „Projekt zakończony” (E-19) bez wezwania | A) „Przejrzyj Kiedyś/może” · B) „Pokaż Projekty Utknięte” · C) bez wezwania | B |
-| D-36 | Przechwyć (E-02) bez kroku naprzód | A) celowy wyjątek od ZP-01: przechwycenie ma być szybkie · B) po zapisie opcja „Doprecyzuj teraz” | A |
-| D-37 | Skład paska nawigacji | A) Start · Inbox · Działania · Projekty · Konteksty · (+) · B) inny skład | A |
+Brak otwartych decyzji.
 
 ## W kolejce
 
@@ -26,6 +22,9 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-37 | Skład paska nawigacji | Start · Inbox · Działania · Projekty · Konteksty · (+) Przechwyć (nawigacja/ekrany.mmd) | 2026-10-11 |
+| D-36 | Przechwyć (E-02) bez kroku naprzód | celowy wyjątek od ZP-01: przechwycenie ma być błyskawiczne | 2026-10-11 |
+| D-35 | Ekran „Projekt zakończony” (E-19) | wezwanie „Pokaż Projekty Utknięte” (G-OPR-09) | 2026-10-11 |
 | D-34 | Przegląd tygodniowy | tryb prowadzony, Punkt po Punkcie (G-OPR-13) | 2026-10-11 |
 | D-33 | Reguła 2 minut w Doprecyzowaniu | „Zrób teraz” jako pierwsza opcja (G-OPR-05) | 2026-10-11 |
 | D-32 | Niepusty Inbox | wezwanie „Opróżnij Inbox (N)” na ekranie głównym (G-ELM-15) | 2026-10-11 |

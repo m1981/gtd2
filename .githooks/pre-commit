@@ -1,0 +1,24 @@
+#!/bin/sh
+# Pre-commit GTD-App: sprawdza mapę nawigacji (reguły R1–R5 z nawigacja/sprawdz.py)
+# i to, czy nawigacja/mapa-nawigacji.html jest zbudowana z aktualnego ekrany.mmd.
+# Włączenie w nowym klonie: git config core.hooksPath .githooks
+cd "$(git rev-parse --show-toplevel)/nawigacja" || exit 1
+
+if ! python3 -B sprawdz.py ekrany.mmd > /dev/null; then
+  python3 -B sprawdz.py ekrany.mmd | grep -E 'Reguła|---|UWAGA'
+  echo
+  echo "pre-commit: mapa nawigacji łamie reguły (wiersze UWAGA powyżej)."
+  echo "Popraw nawigacja/ekrany.mmd albo zadeklaruj świadomy wyjątek: %% wyjatek-zp01: ID (decyzja)"
+  exit 1
+fi
+
+tmp=$(mktemp)
+python3 -B zbuduj.py "$tmp" > /dev/null
+if ! cmp -s "$tmp" mapa-nawigacji.html; then
+  rm -f "$tmp"
+  echo "pre-commit: nawigacja/mapa-nawigacji.html jest nieaktualna."
+  echo "Uruchom: (cd nawigacja && python3 zbuduj.py) i dodaj plik do commita."
+  exit 1
+fi
+rm -f "$tmp"
+exit 0

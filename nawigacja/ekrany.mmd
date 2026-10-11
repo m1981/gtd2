@@ -4,7 +4,10 @@
 %%   klasa modal  = przepływ pełnoekranowy bez paska; wyjście tylko krawędzią -.->
 %%   klasa sukces = ekran zakończenia celu; ZP-01 wymaga wezwania ==>
 %%   klasa zewn   = aplikacja spoza GTD-App
+%%   %% wyjatek-zp01: ID (decyzja) = świadomy wyjątek od reguły R5
 %%   -->  zwykłe przejście     ==>  wezwanie do działania (ZP-01)     -.->  wyjście / powrót
+%% wyjatek-zp01: E02 (D-36)
+%% pasek nawigacji: D-37
 flowchart LR
   NAV(["Pasek: Start · Inbox · Działania · Projekty · Konteksty · (+)"])
 
@@ -80,6 +83,7 @@ flowchart LR
   E09 -->|"Działanie"| E06
   E09 -.->|"Wstecz"| E08
 
+  E19 ==>|"Pokaż Projekty Utknięte · D-35"| E08
   E19 -->|"Projekty"| E08
 
   E10 -->|"Kontekst"| E11

@@ -32,7 +32,7 @@ th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; colo
 td.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
 .tbl { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
 .pill { font: 600 0.75rem/1 var(--f-mono); padding: 4px 8px; border-radius: 999px; white-space: nowrap; }
-.pill.ok { color: var(--ok); background: var(--ok-bg); } .pill.warn { color: var(--warn); background: var(--warn-bg); }
+.pill.ok { color: var(--ok); background: var(--ok-bg); } .pill.info { color: var(--muted); background: var(--bg); border: 1px solid var(--line); } .pill.warn { color: var(--warn); background: var(--warn-bg); }
 .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
 .cols > * { min-width: 0; }
 code, .id { font-family: var(--f-mono); font-size: 0.85em; }
@@ -42,7 +42,7 @@ code, .id { font-family: var(--f-mono); font-size: 0.85em; }
 <div class="wrap">
   <header>
     <h1>Mapa nawigacji GTD-App</h1>
-    <p class="lead">Ekrany i przejścia według specyfikacji po decyzji D-34. Skrypt <code>sprawdz.py</code> czyta ten sam plik Mermaid i sprawdza, czy nie ma pułapek, czy każdy przepływ kończy się następnym krokiem (ZP-01) i ile kliknięć dzieli kluczowe ekrany.</p>
+    <p class="lead">Ekrany i przejścia według specyfikacji po decyzji D-34. Skrypt <code>sprawdz.py</code> czyta ten sam plik Mermaid i sprawdza, czy nie ma pułapek, czy każdy przepływ kończy się następnym krokiem (ZP-01, poza świadomymi wyjątkami) i ile kliknięć dzieli kluczowe ekrany.</p>
   </header>
 
   <div class="legend" aria-label="Legenda">
@@ -131,6 +131,7 @@ flowchart LR
   E09 --&gt;|"Działanie"| E06
   E09 -.-&gt;|"Wstecz"| E08
 
+  E19 ==&gt;|"Pokaż Projekty Utknięte · D-35"| E08
   E19 --&gt;|"Projekty"| E08
 
   E10 --&gt;|"Kontekst"| E11
@@ -180,7 +181,7 @@ flowchart LR
   <div class="cols">
     <section>
       <h2>Reguły</h2>
-      <div class="tbl"><table><thead><tr><th>Reguła</th><th>Wynik</th><th>Ekrany</th></tr></thead><tbody><tr><td>R1 Osiągalność ze Startu</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>R2 Brak pułapek (powrót do Startu)</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>R3 Każdy modal ma wyjście</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>R4 ZP-01: sukces z wezwaniem do dalszej pracy</td><td><span class="pill warn">UWAGA</span></td><td>E-19 Projekt zakończony</td></tr><tr><td>R5 ZP-01: miejsca bez kroku naprzód</td><td><span class="pill warn">UWAGA</span></td><td>E-02 Przechwyć</td></tr></tbody></table></div>
+      <div class="tbl"><table><thead><tr><th>Reguła</th><th>Wynik</th><th>Ekrany</th></tr></thead><tbody><tr><td>R1 Osiągalność ze Startu</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>R2 Brak pułapek (powrót do Startu)</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>R3 Każdy modal ma wyjście</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>R4 ZP-01: sukces z wezwaniem do dalszej pracy</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>R5 ZP-01: miejsca bez kroku naprzód</td><td><span class="pill ok">OK</span></td><td>—</td></tr><tr><td>Świadome wyjątki od ZP-01</td><td><span class="pill info">INFO</span></td><td>E-02 Przechwyć (D-36)</td></tr></tbody></table></div>
       <p class="note">Ekrany z paskiem zawsze mają drogę do Startu, więc pułapka może powstać tylko w przepływie bez paska.</p>
     </section>
     <section>
