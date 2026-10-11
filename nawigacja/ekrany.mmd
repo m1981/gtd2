@@ -1,0 +1,125 @@
+%% GTD-App: mapa ekranów i sterowania (wersja robocza, stan specyfikacji po D-34)
+%% Konwencje (czyta je też sprawdz.py):
+%%   klasa ekran  = ekran z paskiem nawigacji (z każdego dostępne NAV)
+%%   klasa modal  = przepływ pełnoekranowy bez paska; wyjście tylko krawędzią -.->
+%%   klasa sukces = ekran zakończenia celu; ZP-01 wymaga wezwania ==>
+%%   klasa zewn   = aplikacja spoza GTD-App
+%%   -->  zwykłe przejście     ==>  wezwanie do działania (ZP-01)     -.->  wyjście / powrót
+flowchart LR
+  NAV(["Pasek: Start · Inbox · Działania · Projekty · Konteksty · (+)"])
+
+  E01["E-01 Start"]
+  E02["E-02 Przechwyć"]
+  E03["E-03 Inbox"]
+  E04["E-04 Doprecyzowanie"]
+  E05["E-05 Następne działania"]
+  E06["E-06 Działanie"]
+  E07["E-07 Widok przygotowania"]
+  E08["E-08 Projekty"]
+  E09["E-09 Projekt"]
+  E10["E-10 Konteksty"]
+  E11["E-11 Kontekst / sklep"]
+  E12["E-12 Czekam na"]
+  E13["E-13 Kiedyś/może"]
+  E14["E-14 Przegląd prowadzony"]
+  E15["E-15 Kalendarz"]
+  E16(["E-16 Inbox pusty"])
+  E17["E-17 Kosz"]
+  E19(["E-19 Projekt zakończony"])
+  E20(["E-20 Przegląd ukończony"])
+  EXT[/"Telefon / wiadomości"/]
+
+  NAV --> E01
+  NAV --> E03
+  NAV --> E05
+  NAV --> E08
+  NAV --> E10
+  NAV -->|"(+)"| E02
+
+  E01 ==>|"Opróżnij Inbox (N) · D-32"| E04
+  E01 ==>|"Przygotuj się · D-31"| E07
+  E01 ==>|"Zacznij przegląd · REV-01"| E14
+  E01 ==>|"Projekt Utknięty"| E09
+  E01 -->|"Czekam na"| E12
+  E01 -->|"Kiedyś/może"| E13
+  E01 -->|"Kalendarz"| E15
+  E01 -->|"Kosz"| E17
+
+  E02 -.->|"Zapisz / Anuluj"| E01
+
+  E03 ==>|"Opróżnij Inbox"| E04
+  E03 -->|"Element"| E04
+
+  E04 -->|"Zrób teraz · D-33 / wynik"| E04
+  E04 ==>|"Inbox pusty"| E16
+  E04 -.->|"Przerwij"| E03
+  E04 -.->|"Wróć do Przeglądu"| E14
+
+  E16 ==>|"Wybierz działanie"| E05
+  E16 -->|"Start"| E01
+
+  E05 -->|"Działanie"| E06
+  E06 ==>|"Przygotuj się · G-PRZ-04"| E07
+  E06 -->|"Zakończ"| E05
+  E06 ==>|"Zakończ ostatnie · PRJ-01"| E09
+  E06 -->|"Projekt"| E09
+  E06 -->|"Kontekst"| E11
+  E06 -.->|"Wstecz"| E05
+
+  E07 -->|"Odhacz / Wszystkie"| E07
+  E07 ==>|"Przygotowane → Zacznij"| E06
+  E07 -->|"Sklep"| E11
+  E07 -.->|"Zamknij"| E06
+
+  E08 -->|"Projekt"| E09
+  E08 -.->|"Dalej w Przeglądzie"| E14
+  E09 ==>|"Dodaj następne · D-26"| E06
+  E09 ==>|"Odłóż · D-26"| E13
+  E09 ==>|"Zakończ Projekt · D-26"| E19
+  E09 ==>|"Przygotuj się · G-PRJ-09"| E07
+  E09 -->|"Działanie"| E06
+  E09 -.->|"Wstecz"| E08
+
+  E19 -->|"Projekty"| E08
+
+  E10 -->|"Kontekst"| E11
+  E11 -->|"Odhacz Pozycję"| E11
+  E11 -->|"Działanie"| E06
+  E11 -->|"Lista przygotowania"| E07
+  E11 -.->|"Wstecz"| E10
+
+  E12 ==>|"Skontaktuj się · D-30"| EXT
+  E12 ==>|"Przesuń kontrolę · D-30"| E12
+  E12 -->|"Działanie"| E06
+  E12 -.->|"Dalej w Przeglądzie"| E14
+  EXT -.->|"powrót"| E12
+
+  E13 -->|"Aktywuj"| E09
+  E13 -.->|"Dalej w Przeglądzie"| E14
+
+  E14 -->|"Punkt: Inbox"| E04
+  E14 -->|"Punkt: Projekty"| E08
+  E14 -->|"Punkt: Czekam na"| E12
+  E14 -->|"Punkt: Kalendarz"| E15
+  E14 -->|"Punkt: Kiedyś/może"| E13
+  E14 ==>|"Ukończony"| E20
+  E14 -.->|"Przerwij"| E01
+
+  E15 -->|"Działanie"| E06
+  E15 -.->|"Dalej w Przeglądzie"| E14
+
+  E20 ==>|"Pierwsze działanie tygodnia"| E05
+  E20 -->|"Start"| E01
+
+  E17 -->|"Przywróć / Trwale usuń"| E17
+
+  classDef ekran fill:#e8eef6,stroke:#3d5a80,color:#1b2635
+  classDef modal fill:#fdf0d5,stroke:#b07d18,color:#3a2a06
+  classDef sukces fill:#dff1e3,stroke:#2f7d4a,color:#12301c
+  classDef zewn fill:#eeeeee,stroke:#777777,color:#222222,stroke-dasharray:4 3
+  classDef nav fill:#3d5a80,stroke:#3d5a80,color:#ffffff
+  class E01,E03,E05,E06,E08,E09,E10,E11,E12,E13,E15,E17 ekran
+  class E02,E04,E07,E14 modal
+  class E16,E19,E20 sukces
+  class EXT zewn
+  class NAV nav
