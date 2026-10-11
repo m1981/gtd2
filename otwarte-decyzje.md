@@ -4,13 +4,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-| ID | Decyzja | Opcje | Propozycja |
-| --- | --- | --- | --- |
-| D-30 | Data kontroli przy Czekam na (ZP-01) | A) bez powiadomień; przy zaległym Działaniu wezwania „Skontaktuj się” i „Przesuń kontrolę” · B) dodatkowo powiadomienie w dniu kontroli · C) bez zmian | A |
-| D-31 | Przygotowanie przed Datą wykonania | A) „Przygotuj się” z wyprzedzeniem, domyślnie 2 dni, ustawialne · B) tylko przy samym Działaniu | A |
-| D-32 | Niepusty Inbox | A) wezwanie „Opróżnij Inbox (N)” na ekranie głównym · B) tylko licznik | A |
-| D-33 | Reguła 2 minut w Doprecyzowaniu | A) „Zrób teraz” jako pierwsza opcja · B) bez wyróżnienia | A |
-| D-34 | Przegląd tygodniowy | A) tryb prowadzony: Punkt po Punkcie, z otwarciem właściwego Widoku · B) checklista do samodzielnego odhaczania | A |
+Brak otwartych decyzji.
 
 ## W kolejce
 
@@ -28,6 +22,11 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-34 | Przegląd tygodniowy | tryb prowadzony, Punkt po Punkcie (G-OPR-13) | 2026-10-11 |
+| D-33 | Reguła 2 minut w Doprecyzowaniu | „Zrób teraz” jako pierwsza opcja (G-OPR-05) | 2026-10-11 |
+| D-32 | Niepusty Inbox | wezwanie „Opróżnij Inbox (N)” na ekranie głównym (G-ELM-15) | 2026-10-11 |
+| D-31 | Przygotowanie przed Datą wykonania | „Przygotuj się” z wyprzedzeniem, domyślnie 2 dni (G-PRZ-04) | 2026-10-11 |
+| D-30 | Data kontroli przy Czekam na | bez powiadomień; wezwania „Skontaktuj się” i „Przesuń kontrolę” (G-ATR-07) | 2026-10-11 |
 | D-29 | Folder .idea w repozytorium | dodany do .gitignore | 2026-10-11 |
 | D-28 | Sprzątanie po gicie w gtd2 | zgoda na usuwanie w PycharmProjects na sesję; usuwane tylko pliki blokad i tymczasowe w gtd2/.git | 2026-10-11 |
 | D-27 | Gdzie trzymać repozytorium na stałe | komputer Użytkownika: PycharmProjects/gtd2 | 2026-10-11 |

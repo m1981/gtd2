@@ -61,7 +61,7 @@ G-ELM-12 **Otwarte działanie** (Open Action) to Działanie w Stanie Następne d
 
 G-ELM-13 **Widok** (View) to filtrowane zestawienie Elementów według Stanu i atrybutów (np. Następne działania z Kontekstem @telefon). Wyświetlenie Widoku nie zmienia żadnego Elementu. Każdy atrybut Elementu i Projektu (Stan, Projekt, Obszar odpowiedzialności, Kontekst, Typ Kontekstu, Kategoria Miejsca, Charakter Działania, Delegat, każda data, Szacowany czas, Wymagana energia) może być kryterium filtrowania Widoku, także w połączeniu z innymi.
 
-G-ELM-14 **Inbox** (Inbox) to Widok Elementów w Stanie W Inboxie. **G-ELM-15 Pusty Inbox (Empty Inbox)** oznacza zero Elementów w tym Stanie.
+G-ELM-14 **Inbox** (Inbox) to Widok Elementów w Stanie W Inboxie. **G-ELM-15 Pusty Inbox (Empty Inbox)** oznacza zero Elementów w tym Stanie. Gdy Inbox nie jest Pusty, GTD-App pokazuje na ekranie głównym wezwanie „Opróżnij Inbox (N)” (ZP-01).
 
 ## Projekt i Obszar odpowiedzialności
 
@@ -93,7 +93,7 @@ G-PRJ-08 **Obszar odpowiedzialności** (Area of Focus) to sfera życia lub pracy
 | G-ATR-04 **Data wykonania** (Scheduled Date) | Dzień lub dzień z godziną, w którym Działanie musi zostać wykonane i ani wcześniej, ani później nie ma sensu. Jej obecność oznacza Stan Zaplanowane. | Data lub data + godzina | 0..1 |
 | G-ATR-05 **Termin ostateczny** (Due Date) | Najpóźniejsza data, do której Działanie lub Projekt musi być Zakończony, bo inaczej wystąpi realna konsekwencja. Nie zmienia Stanu. | Data | 0..1 |
 | G-ATR-06 **Data delegowania** (Delegation Date) | Dzień, w którym Użytkownik powierzył Działanie Delegatowi. | Data, domyślnie dzień Delegowania | 1 w Stanie Czekam na |
-| G-ATR-07 **Data kontroli** (Follow-up Date) | Dzień, w którym Użytkownik chce sprawdzić postęp u Delegata. Od tego dnia GTD-App wyróżnia Działanie w Widokach jako zaległe; nie wysyła powiadomienia. | Data ≥ Data delegowania | 0..1 |
+| G-ATR-07 **Data kontroli** (Follow-up Date) | Dzień, w którym Użytkownik chce sprawdzić postęp u Delegata. Od tego dnia GTD-App wyróżnia Działanie w Widokach jako zaległe; nie wysyła powiadomienia. Przy zaległym Działaniu pokazuje wezwania „Skontaktuj się z \[Delegatem\]” i „Przesuń kontrolę” (ZP-01). | Data ≥ Data delegowania | 0..1 |
 | G-ATR-08 **Data zakończenia** (Completion Date) | Moment oznaczenia Działania lub Projektu jako Zakończonego. | Data + godzina, ustawiana przez GTD-App | 1 w Stanie Zakończony |
 
 *Nie mylić:* Kontekst „@Marek” oznacza, że do wykonania Działania potrzebna jest obecność Marka (np. temat na spotkanie). Delegat Marek oznacza, że to Marek wykonuje Działanie.
@@ -129,7 +129,7 @@ G-PRZ-02 **Pozycja przygotowania** (Preparation Item) to punkt Listy przygotowan
 
 G-PRZ-03 **Sposób pozyskania** (Acquisition Mode) Pozycji ma jedną z dwóch wartości. **Zakup**: Pozycja ma 1..\* Miejsc \[G-ETK-06\] kategorii Sklep, traktowanych jako alternatywa (LUB, jak w G-ETK-10). **Skompletowanie**: rzecz posiadana przez Użytkownika, do zebrania z domu lub innego Miejsca.
 
-G-PRZ-04 **Działanie nieprzygotowane** (Unprepared Action) to Działanie o Gotowości Nieprzygotowane \[G-PRZ-06\]. Pozostaje widoczne w Widokach Następnych działań, z wezwaniem do działania „Przygotuj się” (ZP-01).
+G-PRZ-04 **Działanie nieprzygotowane** (Unprepared Action) to Działanie o Gotowości Nieprzygotowane \[G-PRZ-06\]. Pozostaje widoczne w Widokach Następnych działań, z wezwaniem do działania „Przygotuj się” (ZP-01). Gdy Działanie ma Datę wykonania, wezwanie pojawia się też na ekranie głównym z wyprzedzeniem (domyślnie 2 dni, ustawialne).
 
 G-PRZ-05 **Widok przygotowania** (Preparation View) to Widok jednej Listy przygotowania, otwierany wezwaniem „Przygotuj się”. Pokazuje najpierw Pozycje do Zakupu pogrupowane według sklepu, pod nimi Pozycje do Skompletowania. Otwarty z Działania pokazuje domyślnie to Działanie; przełącznik „Wszystkie” rozszerza zakres na wszystkie Działania nieprzygotowane. Użytkownik odhacza w nim Pozycje.
 
@@ -144,7 +144,7 @@ G-OPR-01 Operacja (Operation) to czynność Użytkownika lub GTD-App zmieniając
 | G-OPR-02 **Przechwycenie** (Capture) | Utworzenie nowego Elementu z treści podanej przez Użytkownika dowolnym Kanałem przechwycenia. | brak → W Inboxie |
 | G-OPR-03 **Kanał przechwycenia** (Capture Channel) | Sposób dostarczenia treści do Przechwycenia: pole tekstowe, widżet, dyktowanie, udostępnienie z innej aplikacji, adres e-mail. Wariant technologiczny, nie osobna Operacja. | — |
 | G-OPR-04 **Doprecyzowanie** (Clarification) | Decyzja Użytkownika o jednym Elemencie W Inboxie: czy wymaga działania i jakiego. Kończy się dokładnie jednym z wyników poniżej. | W Inboxie → dowolny inny Stan |
-| G-OPR-05 **Wykonanie natychmiastowe** (Do Now) | Wynik Doprecyzowania, gdy Użytkownik wykonał Działanie od razu (reguła 2 minut). Decyzję o czasie podejmuje Użytkownik, nie GTD-App. Element pozostaje w GTD-App jako Zakończony. | W Inboxie → Zakończony |
+| G-OPR-05 **Wykonanie natychmiastowe** (Do Now) | Wynik Doprecyzowania, gdy Użytkownik wykonał Działanie od razu (reguła 2 minut). Decyzję o czasie podejmuje Użytkownik, nie GTD-App. Element pozostaje w GTD-App jako Zakończony. W Doprecyzowaniu to pierwsza, wyróżniona opcja „Zrób teraz” (ZP-01). | W Inboxie → Zakończony |
 | G-OPR-06 **Przekształcenie w Projekt** (Convert to Project) | Wynik Doprecyzowania: utworzenie Projektu, którego Rezultat powstaje z treści Elementu, wraz z ≥1 Otwartym działaniem. Element przechwycony przestaje istnieć. | W Inboxie → (Projekt Aktywny) |
 | G-OPR-07 **Delegowanie** (Delegate) | Powierzenie Działania Delegatowi z zapisem Daty delegowania. Możliwe z Doprecyzowania lub z Następnego działania. GTD-App nie powiadamia Delegata. | W Inboxie / Następne działanie → Czekam na |
 | G-OPR-08 **Zakończenie Działania** (Complete Action) | Oznaczenie Otwartego działania jako wykonanego. | Otwarte działanie → Zakończony |
@@ -153,7 +153,7 @@ G-OPR-01 Operacja (Operation) to czynność Użytkownika lub GTD-App zmieniając
 | G-OPR-11 **Przywrócenie** (Restore) | Cofnięcie Przeniesienia do Kosza. | W Koszu → Stan sprzed Przeniesienia |
 | G-OPR-12 **Trwałe usunięcie** (Permanent Delete) | Nieodwracalne usunięcie Elementu lub Projektu z GTD-App, wyłącznie na polecenie Użytkownika. GTD-App nigdy nie usuwa trwale automatycznie. | W Koszu → brak |
 
-G-OPR-13 **Przegląd tygodniowy** (Weekly Review) to sesja Użytkownika, w której przechodzi on kolejno wszystkie Punkty kontrolne, aby doprowadzić system do stanu aktualnego. Przegląd jest **ukończony**, gdy Użytkownik odhaczył wszystkie Punkty kontrolne; GTD-App zapisuje wtedy datę ostatniego ukończonego Przeglądu.
+G-OPR-13 **Przegląd tygodniowy** (Weekly Review) to sesja Użytkownika, w której przechodzi on kolejno wszystkie Punkty kontrolne, aby doprowadzić system do stanu aktualnego. Przegląd jest **ukończony**, gdy Użytkownik odhaczył wszystkie Punkty kontrolne; GTD-App zapisuje wtedy datę ostatniego ukończonego Przeglądu. Przegląd jest prowadzony: GTD-App przechodzi Punkt po Punkcie i dla Systemowego Punktu kontrolnego otwiera właściwy Widok (ZP-01).
 
 G-OPR-14 **Punkt kontrolny** (Checklist Item) to pojedynczy krok Przeglądu tygodniowego. **Systemowy** Punkt kontrolny wskazuje Widok GTD-App (np. Projekty Utknięte). **Własny** Punkt kontrolny to tekst Użytkownika opisujący czynność poza GTD-App (np. „Opróżnić papierowy notatnik”).
 
