@@ -6,10 +6,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Opcje | Propozycja |
 | --- | --- | --- | --- |
-| D-21 | Narzędzie a rzecz z domu do skompletowania (po wyjaśnieniu) | A) Kontekst Narzędzie tylko dla rzeczy zawsze przy sobie; rzeczy przynoszone przed zadaniem to Pozycje do Skompletowania · B) wszystkie narzędzia jako Kontekst, Widok przygotowania pokazuje je jako checklistę | A |
-| D-24 | Domyślny zakres Widoku przygotowania otwartego z Działania | A) to Działanie, przełącznik „Wszystkie” · B) wszystkie Działania nieprzygotowane | A |
-| D-25 | Układ Widoku Kontekstu sklepu | A) dwie sekcje: „Do kupienia” (Pozycje) nad „Działania” · B) jedna wspólna lista | A |
-| D-26 | Wezwanie przy Projekcie Utkniętym (ZP-01) | A) „Zdefiniuj następne działanie” przy Projekcie · B) tylko oznaczenie Utknięty | A |
+| D-26 | Wezwanie przy Projekcie Utkniętym (ZP-01) | A) „Zdefiniuj następne działanie” · B) tylko oznaczenie Utknięty · C) trzy wyjścia: dodaj następne działanie / odłóż na Kiedyś/może / zakończ Projekt | C |
 
 ## W kolejce
 
@@ -29,6 +26,9 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-25 | Układ Widoku Kontekstu sklepu | dwie sekcje: „Do kupienia” nad „Działania” (G-ETK-04) | 2026-10-11 |
+| D-24 | Domyślny zakres Widoku przygotowania | to Działanie, przełącznik „Wszystkie” (G-PRZ-05) | 2026-10-11 |
+| D-21 | Narzędzie a rzecz z domu do skompletowania | Narzędzie tylko dla rzeczy sprawdzanych w chwili; rzeczy przynoszone przed zadaniem to Pozycje do Skompletowania (G-ETK-07) | 2026-10-11 |
 | D-23 | Przygotowanie jako przypadek użycia | nowy cel UC-04 Przygotować Działanie | 2026-10-11 |
 | D-22 | Pozycje do Zakupu w Widoku Kontekstów sklepu | własna odpowiedź: w Widoku przygotowania przełącznik „to Działanie / wszystkie”; od strony Kontekstu sklepu od razu wszystkie (jak widok etykiety w Todoist) | 2026-10-11 |
 | D-19 | Projekt, którego jedynym krokiem jest przygotowanie | status wyliczany „Wymaga przygotowania” (G-PRJ-09); Utknięty tylko bez żadnego kroku | 2026-10-11 |

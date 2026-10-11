@@ -87,7 +87,7 @@ G-PRJ-08 **Obszar odpowiedzialności** (Area of Focus) to sfera życia lub pracy
 
 | Atrybut | Definicja | Dziedzina wartości | Krotność |
 | --- | --- | --- | --- |
-| G-ATR-01 **Kontekst** (Context) | Warunek konieczny do wykonania Działania, sprawdzalny obserwacją chwili (teraz prawda albo fałsz). Ma dokładnie jeden Typ Kontekstu \[G-ETK-05\]. Synonim: Etykieta. | Kontekst zdefiniowany przez Użytkownika (np. @dom, @Castorama, @wiertarka, @Marek, @pogoda) | 0..\* |
+| G-ATR-01 **Kontekst** (Context) | Warunek konieczny do wykonania Działania, sprawdzalny obserwacją chwili (teraz prawda albo fałsz). Ma dokładnie jeden Typ Kontekstu \[G-ETK-05\]. Synonim: Etykieta. | Kontekst zdefiniowany przez Użytkownika (np. @dom, @Castorama, @komputer, @Marek, @pogoda) | 0..\* |
 | G-ATR-02 **Szacowany czas** (Time Estimate) | Przewidywany czas potrzebny na wykonanie Działania. | Liczba całkowita minut > 0 | 0..1 |
 | G-ATR-03 **Wymagana energia** (Energy Level) | Poziom koncentracji i wysiłku potrzebny do wykonania Działania. „Wysiłek” jest synonimem tego atrybutu, nie osobnym pojęciem. | niska / średnia / wysoka | 0..1 |
 | G-ATR-04 **Data wykonania** (Scheduled Date) | Dzień lub dzień z godziną, w którym Działanie musi zostać wykonane i ani wcześniej, ani później nie ma sensu. Jej obecność oznacza Stan Zaplanowane. | Data lub data + godzina | 0..1 |
@@ -107,7 +107,7 @@ G-ETK-05 **Typ Kontekstu** (Context Type) to klasyfikacja Kontekstu według tego
 | Typ | Warunek | Przykłady |
 | --- | --- | --- |
 | G-ETK-06 **Miejsce** (Place) | gdzie Użytkownik musi być, w tym sklep internetowy | @dom, @NaMieście, @Castorama, @Allegro |
-| G-ETK-07 **Narzędzie** (Tool) | co Użytkownik musi mieć przy sobie | @komputer, @telefon, @wiertarka |
+| G-ETK-07 **Narzędzie** (Tool) | co Użytkownik musi mieć przy sobie, sprawdzane w chwili; rzecz przynoszona przed konkretnym Działaniem to Pozycja do Skompletowania \[G-PRZ-03\] | @komputer, @telefon |
 | G-ETK-02 **Osoba** (Person) | kto musi być dostępny; osoba spoza GTD-App | @Marek, @Gosia |
 | G-ETK-08 **Okoliczność** (Circumstance) | stan świata, na który Użytkownik nie ma wpływu | @pogoda |
 
@@ -119,7 +119,7 @@ G-ETK-10 **Reguła dopasowania Kontekstów** (Context Matching Rule): Działanie
 
 G-ETK-03 **Wybór Kontekstu** (Label Picker): przy edycji Działania Użytkownik wybiera Kontekst z listy istniejących. Gdy wpisze nazwę nieistniejącą, GTD-App proponuje utworzenie nowego Kontekstu, prosi o jego Typ i tworzy go dopiero po potwierdzeniu.
 
-G-ETK-04 **Widok Kontekstów** (Contexts View) to Widok wszystkich Kontekstów pogrupowanych według Typu, z liczbą przypisanych Otwartych działań, z filtrem po Typie i Kategorii Miejsca. Wybranie Kontekstu otwiera Widok jego Działań; dla Miejsca kategorii Sklep Widok pokazuje także nieodhaczone Pozycje do Zakupu ze wszystkich Działań \[G-PRZ-03\].
+G-ETK-04 **Widok Kontekstów** (Contexts View) to Widok wszystkich Kontekstów pogrupowanych według Typu, z liczbą przypisanych Otwartych działań, z filtrem po Typie i Kategorii Miejsca. Wybranie Kontekstu otwiera Widok jego Działań; dla Miejsca kategorii Sklep Widok ma dwie sekcje: najpierw „Do kupienia” (nieodhaczone Pozycje do Zakupu ze wszystkich Działań \[G-PRZ-03\]), pod nią „Działania”.
 
 ## Przygotowanie
 
@@ -131,7 +131,7 @@ G-PRZ-03 **Sposób pozyskania** (Acquisition Mode) Pozycji ma jedną z dwóch wa
 
 G-PRZ-04 **Działanie nieprzygotowane** (Unprepared Action) to Działanie o Gotowości Nieprzygotowane \[G-PRZ-06\]. Pozostaje widoczne w Widokach Następnych działań, z wezwaniem do działania „Przygotuj się” (ZP-01).
 
-G-PRZ-05 **Widok przygotowania** (Preparation View) to Widok jednej Listy przygotowania, otwierany wezwaniem „Przygotuj się”. Pokazuje najpierw Pozycje do Zakupu pogrupowane według sklepu, pod nimi Pozycje do Skompletowania. Ma przełącznik zakresu: to Działanie albo wszystkie Działania nieprzygotowane. Użytkownik odhacza w nim Pozycje.
+G-PRZ-05 **Widok przygotowania** (Preparation View) to Widok jednej Listy przygotowania, otwierany wezwaniem „Przygotuj się”. Pokazuje najpierw Pozycje do Zakupu pogrupowane według sklepu, pod nimi Pozycje do Skompletowania. Otwarty z Działania pokazuje domyślnie to Działanie; przełącznik „Wszystkie” rozszerza zakres na wszystkie Działania nieprzygotowane. Użytkownik odhacza w nim Pozycje.
 
 G-PRZ-06 **Gotowość Działania** (Readiness) to atrybut wyliczany Działania o dwóch wartościach. **Przygotowane**: Działanie nie ma Listy przygotowania albo wszystkie jej Pozycje są odhaczone. **Nieprzygotowane**: w przeciwnym razie. Gotowość jest niezależna od Stanu (Działanie może być jednocześnie Zaplanowane i Nieprzygotowane). Użytkownik jej nie ustawia.
 
@@ -212,4 +212,4 @@ Użytkownik \[G-AKT-02\] otwiera Widok przygotowania \[G-PRZ-05\] i odhacza Pozy
 
 - *Warianty wejścia:* z Działania (zakres: to Działanie), z Projektu, ze sklepu (zakres: wszystkie Działania, Miejsce = ten sklep).
 - *Ślad:* G-PRZ-01…06, G-PRJ-09; decyzje D-16…D-23.
-- *Do rozstrzygnięcia:* domyślny zakres Widoku przygotowania (D-24), układ Widoku Kontekstu sklepu (D-25).
+- *Ustalenia:* domyślny zakres to Działanie, z którego otwarto Widok (D-24); Widok Kontekstu sklepu ma sekcje „Do kupienia” i „Działania” (D-25).
