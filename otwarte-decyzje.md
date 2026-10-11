@@ -13,7 +13,6 @@ Brak otwartych decyzji.
 | K-09 | Przegląd wcześniejszych decyzji pod kątem ZP-01 (np. Data kontroli bez powiadomienia) |
 | K-07 | Pozycja wspólna dla kilku Działań |
 | K-08 | Ponowne odznaczenie Pozycji (np. zużyta) |
-| K-05 | Gdzie trzymać repozytorium na stałe (komputer Użytkownika lub GitHub) |
 | K-06 | Poprawka znacznika „\[P\]” w pliku kontraktu |
 | K-01 | Znaczenie „trwale zapisany” w przechwyceniu (UC-01) |
 | K-02 | Nowy przypadek użycia „Doprecyzować Element” (UC-03) |
@@ -24,6 +23,7 @@ Brak otwartych decyzji.
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-27 | Gdzie trzymać repozytorium na stałe | komputer Użytkownika: PycharmProjects/gtd2 | 2026-10-11 |
 | D-26 | Wezwanie przy Projekcie Utkniętym | trzy wyjścia: dodaj następne działanie / odłóż na Kiedyś/może / zakończ Projekt (G-PRJ-04) | 2026-10-11 |
 | D-25 | Układ Widoku Kontekstu sklepu | dwie sekcje: „Do kupienia” nad „Działania” (G-ETK-04) | 2026-10-11 |
 | D-24 | Domyślny zakres Widoku przygotowania | to Działanie, przełącznik „Wszystkie” (G-PRZ-05) | 2026-10-11 |
