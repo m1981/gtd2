@@ -72,7 +72,7 @@ G-PRJ-02 **Rezultat** (Outcome) to obowiązkowy atrybut Projektu: opis stanu św
 | Stan Projektu | Definicja | Ograniczenia |
 | --- | --- | --- |
 | G-PRJ-03 **Aktywny** (Active) | Projekt, nad którym Użytkownik pracuje w bieżącym okresie. | Musi mieć ≥1 Otwarte działanie, inaczej jest Utknięty. |
-| G-PRJ-04 **Utknięty** (Stalled) | Stan wyliczany: Projekt Aktywny z zerem Otwartych działań. | Nie ustawia go Użytkownik; GTD-App wylicza go automatycznie. |
+| G-PRJ-04 **Utknięty** (Stalled) | Stan wyliczany: Projekt Aktywny z zerem Otwartych działań. | Nie ustawia go Użytkownik; GTD-App wylicza go automatycznie i pokazuje przy nim trzy wezwania (ZP-01): Dodaj następne działanie, Odłóż na Kiedyś/może \[G-PRJ-05\], Zakończ Projekt \[G-OPR-09\]. |
 | G-PRJ-05 **Kiedyś/może** (Someday/Maybe) | Projekt odłożony bez zobowiązania w bieżącym okresie. | Nie wymaga Otwartych działań; nigdy nie jest Utknięty. |
 | G-PRJ-06 **Zakończony** (Completed) | Projekt, którego Rezultat Użytkownik uznał za osiągnięty. | Nie ma Otwartych działań. Ma Datę zakończenia. |
 | G-PRJ-07 **W Koszu** (Trashed) | Projekt odrzucony przez Użytkownika, możliwy do przywrócenia. | Jego Elementy trafiają do Kosza razem z nim. |

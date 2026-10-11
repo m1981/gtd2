@@ -4,9 +4,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-| ID | Decyzja | Opcje | Propozycja |
-| --- | --- | --- | --- |
-| D-26 | Wezwanie przy Projekcie Utkniętym (ZP-01) | A) „Zdefiniuj następne działanie” · B) tylko oznaczenie Utknięty · C) trzy wyjścia: dodaj następne działanie / odłóż na Kiedyś/może / zakończ Projekt | C |
+Brak otwartych decyzji.
 
 ## W kolejce
 
@@ -26,6 +24,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-26 | Wezwanie przy Projekcie Utkniętym | trzy wyjścia: dodaj następne działanie / odłóż na Kiedyś/może / zakończ Projekt (G-PRJ-04) | 2026-10-11 |
 | D-25 | Układ Widoku Kontekstu sklepu | dwie sekcje: „Do kupienia” nad „Działania” (G-ETK-04) | 2026-10-11 |
 | D-24 | Domyślny zakres Widoku przygotowania | to Działanie, przełącznik „Wszystkie” (G-PRZ-05) | 2026-10-11 |
 | D-21 | Narzędzie a rzecz z domu do skompletowania | Narzędzie tylko dla rzeczy sprawdzanych w chwili; rzeczy przynoszone przed zadaniem to Pozycje do Skompletowania (G-ETK-07) | 2026-10-11 |
