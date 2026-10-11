@@ -2,6 +2,10 @@
 
 Oct 10, 2026 · @Michał
 
+## Zasady projektowe
+
+**ZP-01 Prowadzenie do postępu** (Drive the user home). GTD-App nie jest biernym rejestrem. Wszędzie, gdzie może wskazać Użytkownikowi następny krok, proponuje go aktywnie jako wezwanie do działania (np. „Przygotuj się”), zamiast tylko oznaczać stan.
+
 ## Zasady słownika
 
 Każdy termin ma jedno znaczenie w całej specyfikacji (przypadki użycia, EARS, maszyna stanów, testy). Termin spoza słownika nie może wystąpić w wymaganiu.
@@ -11,7 +15,7 @@ Każdy termin ma jedno znaczenie w całej specyfikacji (przypadki użycia, EARS,
 - Definicja ma postać: rodzaj nadrzędny + cecha odróżniająca. Ograniczenia i krotności są częścią definicji.
 - „Nie mylić z” wskazuje pojęcie najbliższe, z którym termin bywa mylony.
 
-**Identyfikatory.** Każde pojęcie ma identyfikator `G-<grupa>-<nn>`: AKT (aktorzy), ELM (Element i Stany), PRJ (Projekt), ATR (atrybuty), ETK (Etykiety), OPR (Operacje). Identyfikator jest niezmienny i nigdy nie jest używany ponownie, także po usunięciu pojęcia. Przypadki użycia, wymagania EARS i testy powołują się na pojęcia przez identyfikator.
+**Identyfikatory.** Każde pojęcie ma identyfikator `G-<grupa>-<nn>`: AKT (aktorzy), ELM (Element i Stany), PRJ (Projekt), ATR (atrybuty), ETK (Etykiety), OPR (Operacje), PRZ (Przygotowanie). Zasady projektowe mają identyfikatory ZP-nn. Identyfikator jest niezmienny i nigdy nie jest używany ponownie, także po usunięciu pojęcia. Przypadki użycia, wymagania EARS i testy powołują się na pojęcia przez identyfikator.
 
 **Terminy zakazane** (wieloznaczne, nie występują w specyfikacji):
 
@@ -114,6 +118,18 @@ G-ETK-10 **Reguła dopasowania Kontekstów** (Context Matching Rule): Działanie
 G-ETK-03 **Wybór Kontekstu** (Label Picker): przy edycji Działania Użytkownik wybiera Kontekst z listy istniejących. Gdy wpisze nazwę nieistniejącą, GTD-App proponuje utworzenie nowego Kontekstu, prosi o jego Typ i tworzy go dopiero po potwierdzeniu.
 
 G-ETK-04 **Widok Kontekstów** (Contexts View) to Widok wszystkich Kontekstów pogrupowanych według Typu, z liczbą przypisanych Otwartych działań, z filtrem po Typie i Kategorii Miejsca. Wybranie Kontekstu otwiera Widok jego Działań.
+
+## Przygotowanie
+
+G-PRZ-01 **Lista przygotowania** (Preparation List) to opcjonalna część Działania \[G-ELM-11\]: zbiór Pozycji przygotowania, które trzeba odhaczyć, zanim Działanie można zacząć (mise en place). Działanie ma 0..1 Listy; Lista ma 1..\* Pozycji.
+
+G-PRZ-02 **Pozycja przygotowania** (Preparation Item) to punkt Listy przygotowania: rzecz, którą trzeba zdobyć lub zebrać przed rozpoczęciem Działania. Nie jest Elementem \[G-ELM-01\]: nie ma Stanu, Kontekstu, dat ani Projektu. Ma nazwę, Sposób pozyskania i znacznik odhaczenia (tak / nie). *Nie mylić z:* Działanie (np. „Kupić farbę” jako osobne Działanie).
+
+G-PRZ-03 **Sposób pozyskania** (Acquisition Mode) Pozycji ma jedną z dwóch wartości. **Zakup**: Pozycja ma 1..\* Miejsc \[G-ETK-06\] kategorii Sklep, traktowanych jako alternatywa (LUB, jak w G-ETK-10). **Skompletowanie**: rzecz posiadana przez Użytkownika, do zebrania z domu lub innego Miejsca.
+
+G-PRZ-04 **Działanie nieprzygotowane** (Unprepared Action) to Działanie z co najmniej jedną nieodhaczoną Pozycją przygotowania. Pozostaje widoczne w Widokach Następnych działań, z wezwaniem do działania „Przygotuj się” (ZP-01).
+
+G-PRZ-05 **Widok przygotowania** (Preparation View) to Widok jednej Listy przygotowania, otwierany wezwaniem „Przygotuj się”. Pokazuje najpierw Pozycje do Zakupu pogrupowane według sklepu, pod nimi Pozycje do Skompletowania. Użytkownik odhacza w nim Pozycje.
 
 ## Operacje
 
