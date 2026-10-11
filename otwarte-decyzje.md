@@ -23,6 +23,8 @@ Brak otwartych decyzji.
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-29 | Folder .idea w repozytorium | dodany do .gitignore | 2026-10-11 |
+| D-28 | Sprzątanie po gicie w gtd2 | zgoda na usuwanie w PycharmProjects na sesję; usuwane tylko pliki blokad i tymczasowe w gtd2/.git | 2026-10-11 |
 | D-27 | Gdzie trzymać repozytorium na stałe | komputer Użytkownika: PycharmProjects/gtd2 | 2026-10-11 |
 | D-26 | Wezwanie przy Projekcie Utkniętym | trzy wyjścia: dodaj następne działanie / odłóż na Kiedyś/może / zakończ Projekt (G-PRJ-04) | 2026-10-11 |
 | D-25 | Układ Widoku Kontekstu sklepu | dwie sekcje: „Do kupienia” nad „Działania” (G-ETK-04) | 2026-10-11 |
