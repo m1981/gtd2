@@ -24,6 +24,7 @@ Brak otwartych decyzji.
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-47 | Wskaźnik w projekcie „GTD” w claude.ai | dokument claude/start-tutaj.md: lokalizacja repo i kolejność czytania, bez kopii treści | 2026-10-12 |
 | D-46 | Pola obowiązkowe przy Doprecyzowaniu | tylko minimum: Data wykonania, Delegat, Rezultat + Otwarte działanie (CLR-09) | 2026-10-12 |
 | D-45 | Rozbicie Elementu na kilka | operacja Podział (G-OPR-15, CLR-08) | 2026-10-12 |
 | D-44 | Element do istniejącego Projektu przy Doprecyzowaniu | opcjonalny wybór Projektu przy Następne działanie / Zaplanowane / Czekam na (CLR-07) | 2026-10-12 |
