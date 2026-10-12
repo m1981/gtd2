@@ -10,6 +10,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 | D-49 | Szablon: język plików i reguł | A) polski; EARS i nazwy plików bez polskich znaków · B) całość po angielsku | A |
 | D-50 | Szablon: moduły dziedzinowe | A) katalog moduly/ kopiowany w razie potrzeby · B) wszystko w rdzeniu | A |
 | D-51 | Szablon: schematy ID | A) jeden plik narzedzia/id.toml czytany przez skrypty · B) wzorce w skryptach jak w gtd2 | A |
+| D-52 | Szablon: model śladu | A) model z propozycjami: SC, IO, ZP→D, UC→SC/IO, E→UC, auto-sprawdzanie pojęć, hook commit-msg · B) tylko elementy istniejące w gtd2 | A |
 
 ## W kolejce
 
