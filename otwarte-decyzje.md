@@ -4,13 +4,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-| ID | Decyzja | Opcje | Propozycja |
-| --- | --- | --- | --- |
-| D-48 | Szablon: jak powstaje repozytorium szablonowe | A) nowe repo od zera z uogólnionych plików gtd2 · B) wydzielenie z gtd2 (refaktor gtd2) | A |
-| D-49 | Szablon: język plików i reguł | A) polski; EARS i nazwy plików bez polskich znaków · B) całość po angielsku | A |
-| D-50 | Szablon: moduły dziedzinowe | A) katalog moduly/ kopiowany w razie potrzeby · B) wszystko w rdzeniu | A |
-| D-51 | Szablon: schematy ID | A) jeden plik narzedzia/id.toml czytany przez skrypty · B) wzorce w skryptach jak w gtd2 | A |
-| D-52 | Szablon: model śladu | A) model z propozycjami: SC, IO, ZP→D, UC→SC/IO, E→UC, auto-sprawdzanie pojęć, hook commit-msg · B) tylko elementy istniejące w gtd2 | A |
+Brak otwartych decyzji.
 
 ## W kolejce
 
@@ -30,6 +24,11 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-52 | Szablon: model śladu | model z uzupełnieniami; przeniesione do ai-sldc-template jako D-06 | 2026-10-13 |
+| D-51 | Szablon: schematy ID | narzedzia/id.toml; przeniesione do ai-sldc-template jako D-05 | 2026-10-13 |
+| D-50 | Szablon: moduły dziedzinowe | katalog moduly/; przeniesione do ai-sldc-template jako D-04 | 2026-10-13 |
+| D-49 | Szablon: język | polski, EARS po angielsku; przeniesione do ai-sldc-template jako D-03 | 2026-10-13 |
+| D-48 | Szablon: sposób powstania | nowe repozytorium PycharmProjects/ai-sldc-template; przeniesione jako D-02 | 2026-10-13 |
 | D-47 | Wskaźnik w projekcie „GTD” w claude.ai | dokument claude/start-tutaj.md: lokalizacja repo i kolejność czytania, bez kopii treści | 2026-10-12 |
 | D-46 | Pola obowiązkowe przy Doprecyzowaniu | tylko minimum: Data wykonania, Delegat, Rezultat + Otwarte działanie (CLR-09) | 2026-10-12 |
 | D-45 | Rozbicie Elementu na kilka | operacja Podział (G-OPR-15, CLR-08) | 2026-10-12 |
