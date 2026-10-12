@@ -4,7 +4,13 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-Brak otwartych decyzji.
+| ID | Decyzja | Opcje | Propozycja |
+| --- | --- | --- | --- |
+| D-38 | Wymagania EARS w repo ze śladem w pre-commit | A) plik wymagań z ID, wzorcem EARS i polem „źródło”; macierz w obie strony generowana skryptem · B) odłożyć | A |
+| D-39 | Jednostronicowy plan projektu dla agenta | A) AGENTS.md w repo według szkicu z 2026-10-12 · B) zostać przy README i kontrakcie | A |
+| D-40 | Baseline na zamkniętym etapie | A) tag gita baseline-01-slownik-briefy · B) bez tagów | A |
+| D-41 | Jedno źródło prawdy | A) repozytorium dla wszystkich artefaktów; dokument jako widok · B) słownik i rejestr w dokumencie, reszta w repo | A |
+| D-42 | Zakres planu projektu | A) tylko etap specyfikacji · B) od razu także kod i testy | A |
 
 ## W kolejce
 
@@ -17,6 +23,10 @@ Brak otwartych decyzji.
 | K-02 | Nowy przypadek użycia „Doprecyzować Element” (UC-03) |
 | K-03 | Cel „Zarządzać Kontekstami” na liście aktor–cel |
 | K-04 | Reguła „Element nie wraca do Inboxu” jako wymaganie EARS |
+| K-10 | Suspect links: flaga przeglądu po zmianie rodzica |
+| K-11 | Niezależny przegląd wymagań przez osobnego agenta |
+| K-12 | Lekka analiza ryzyka (scenariusze „co pójdzie źle”) |
+| K-13 | Identyfikatory ekranów (E-xx) w słowniku i ślad wymagań |
 
 ## Rozstrzygnięte
 
