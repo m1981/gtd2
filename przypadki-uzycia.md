@@ -26,7 +26,7 @@ Możliwe wyniki Doprecyzowania opisuje UC-03.
 
 *Poziom:* podfunkcja (ryba) · *Zakres:* G-AKT-01 GTD-App · *Aktor główny:* G-AKT-02 Użytkownik · *Zawierany przez:* UC-02, Przegląd tygodniowy \[G-OPR-13\] · *Warunek wstępny:* Element w Stanie W Inboxie \[G-ELM-03\]
 
-Użytkownik \[G-AKT-02\] rozpatruje jeden Element \[G-ELM-01\] w Stanie W Inboxie i wykonuje Doprecyzowanie \[G-OPR-04\]: rozstrzyga, czy Element wymaga działania, i wybiera dokładnie jeden wynik z tabeli poniżej. GTD-App pokazuje jako pierwszą, wyróżnioną opcję „Zrób teraz” \[G-OPR-05\] (D-33). Dla wyników wymagających danych GTD-App prosi tylko o minimum: Datę wykonania \[G-ATR-04\] dla Zaplanowane, Delegata \[G-AKT-03\] dla Czekam na, Rezultat \[G-PRJ-02\] i co najmniej jedno Otwarte działanie \[G-ELM-12\] dla Projektu. Kontekst \[G-ATR-01\], Szacowany czas \[G-ATR-02\], Wymagana energia \[G-ATR-03\] i Lista przygotowania \[G-PRZ-01\] są opcjonalne. Przypadek kończy się, gdy Element ma nowy Stan \[G-ELM-02\] albo stał się Projektem.
+Użytkownik \[G-AKT-02\] rozpatruje jeden Element \[G-ELM-01\] w Stanie W Inboxie i wykonuje Doprecyzowanie \[G-OPR-04\]: rozstrzyga, czy Element wymaga działania, i wybiera dokładnie jeden wynik z tabeli poniżej. GTD-App pokazuje jako pierwszą, wyróżnioną opcję „Zrób teraz” \[G-OPR-05\] (D-33). Dla wyników wymagających danych GTD-App prosi tylko o minimum: Datę wykonania \[G-ATR-04\] dla Zaplanowane, Delegata \[G-AKT-03\] dla Czekam na, Rezultat \[G-PRJ-02\] i co najmniej jedno Otwarte działanie \[G-ELM-12\] dla Projektu. Kontekst \[G-ATR-01\], Szacowany czas \[G-ATR-02\], Wymagana energia \[G-ATR-03\] i Lista przygotowania \[G-PRZ-01\] są opcjonalne (D-46). Przy wynikach Następne działanie, Zaplanowane i Czekam na Użytkownik może opcjonalnie wskazać istniejący Projekt Aktywny \[G-PRJ-03\] (D-44). Przypadek kończy się, gdy Element ma nowy Stan \[G-ELM-02\] albo stał się Projektem.
 
 | Wynik Doprecyzowania | Operacja | Stan końcowy |
 | --- | --- | --- |
@@ -38,9 +38,10 @@ Użytkownik \[G-AKT-02\] rozpatruje jeden Element \[G-ELM-01\] w Stanie W Inboxi
 | Bez zobowiązania teraz | G-OPR-04 Doprecyzowanie | G-ELM-07 Kiedyś/może |
 | Tylko informacja | G-OPR-04 Doprecyzowanie | G-ELM-08 Referencja |
 | Niepotrzebne | G-OPR-10 Przeniesienie do Kosza | G-ELM-10 W Koszu |
+| Kilka spraw w jednym Elemencie | G-OPR-15 Podział | nowe Elementy W Inboxie; Element pierwotny przestaje istnieć |
 
 - *Gwarancja minimalna:* anulowanie zostawia Element W Inboxie bez zmian; Element nie traci treści.
-- *Gwarancja sukcesu:* Element ma dokładnie jeden nowy Stan i nigdy nie wraca do Inboxu.
+- *Gwarancja sukcesu:* Element ma dokładnie jeden nowy Stan albo został Podzielony; nigdy nie wraca do Inboxu.
 
 
 ### UC-04 Przygotować Działanie

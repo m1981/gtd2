@@ -69,6 +69,24 @@ Wzorce: `ubiquitous` · `event` (When) · `state` (While) · `unwanted` (If…th
 - źródło: D-32
 - status: draft
 
+### CLR-07
+- wzorzec: event
+- tekst: When the User clarifies an Item as Next Action, Scheduled or Waiting For, GTD-App shall allow the User to assign it to an existing Active Project.
+- źródło: UC-03, D-44
+- status: draft
+
+### CLR-08
+- wzorzec: event
+- tekst: When the User splits an Item in the Inbox, GTD-App shall replace it with one new Item in the Inbox for each part the User specifies.
+- źródło: UC-03, D-45
+- status: draft
+
+### CLR-09
+- wzorzec: ubiquitous
+- tekst: GTD-App shall not require a Context, Time Estimate, Energy Level or Preparation List to complete a Clarification.
+- źródło: UC-03, D-46
+- status: draft
+
 ## Projekty
 
 ### PRJ-01

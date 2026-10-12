@@ -4,12 +4,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-| ID | Decyzja | Opcje | Propozycja |
-| --- | --- | --- | --- |
-| D-43 | Tabela wyników Doprecyzowania w UC-03 zamiast UC-02; CLR-01…03 ze źródłem UC-03 | A) zostawić · B) cofnąć | A |
-| D-44 | Element do istniejącego Projektu przy Doprecyzowaniu | A) opcjonalny wybór Projektu przy wynikach Następne działanie / Zaplanowane / Czekam na · B) przypisanie tylko później | A |
-| D-45 | Rozbicie Elementu na kilka | A) „Podziel” tworzy kilka Elementów W Inboxie · B) poza zakresem v1.0 | A |
-| D-46 | Pola obowiązkowe przy Doprecyzowaniu | A) tylko minimum (Data wykonania, Delegat, Rezultat + Otwarte działanie) · B) dodatkowo Kontekst dla Następnego działania | A |
+Brak otwartych decyzji.
 
 ## W kolejce
 
@@ -29,6 +24,10 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-46 | Pola obowiązkowe przy Doprecyzowaniu | tylko minimum: Data wykonania, Delegat, Rezultat + Otwarte działanie (CLR-09) | 2026-10-12 |
+| D-45 | Rozbicie Elementu na kilka | operacja Podział (G-OPR-15, CLR-08) | 2026-10-12 |
+| D-44 | Element do istniejącego Projektu przy Doprecyzowaniu | opcjonalny wybór Projektu przy Następne działanie / Zaplanowane / Czekam na (CLR-07) | 2026-10-12 |
+| D-43 | Tabela wyników Doprecyzowania w UC-03 | zostawić; CLR-01…03 ze źródłem UC-03 | 2026-10-12 |
 | D-42 | Zakres planu projektu | tylko etap specyfikacji (AGENTS.md) | 2026-10-12 |
 | D-41 | Jedno źródło prawdy | repozytorium gtd2 dla wszystkich artefaktów; dokumenty w Claude Docs jako archiwum | 2026-10-12 |
 | D-40 | Baseline na zamkniętym etapie | tag baseline-01-slownik-briefy | 2026-10-12 |

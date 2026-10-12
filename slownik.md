@@ -152,6 +152,7 @@ G-OPR-01 Operacja (Operation) to czynność Użytkownika lub GTD-App zmieniając
 | G-OPR-10 **Przeniesienie do Kosza** (Trash) | Odrzucenie Elementu lub Projektu z możliwością przywrócenia. | dowolny → W Koszu |
 | G-OPR-11 **Przywrócenie** (Restore) | Cofnięcie Przeniesienia do Kosza. | W Koszu → Stan sprzed Przeniesienia |
 | G-OPR-12 **Trwałe usunięcie** (Permanent Delete) | Nieodwracalne usunięcie Elementu lub Projektu z GTD-App, wyłącznie na polecenie Użytkownika. GTD-App nigdy nie usuwa trwale automatycznie. | W Koszu → brak |
+| G-OPR-15 **Podział** (Split) | Zastąpienie jednego Elementu W Inboxie kilkoma nowymi Elementami, po jednym na każdą sprawę wskazaną przez Użytkownika (D-45). Element pierwotny przestaje istnieć. | W Inboxie → nowe Elementy W Inboxie |
 
 G-OPR-13 **Przegląd tygodniowy** (Weekly Review) to sesja Użytkownika, w której przechodzi on kolejno wszystkie Punkty kontrolne, aby doprowadzić system do stanu aktualnego. Przegląd jest **ukończony**, gdy Użytkownik odhaczył wszystkie Punkty kontrolne; GTD-App zapisuje wtedy datę ostatniego ukończonego Przeglądu. Przegląd jest prowadzony: GTD-App przechodzi Punkt po Punkcie i dla Systemowego Punktu kontrolnego otwiera właściwy Widok (ZP-01).
 
