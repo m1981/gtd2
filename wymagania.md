@@ -36,19 +36,19 @@ Wzorce: `ubiquitous` · `event` (When) · `state` (While) · `unwanted` (If…th
 ### CLR-01
 - wzorzec: event
 - tekst: When the User marks an Item in the Inbox as non-actionable, GTD-App shall require its classification as Reference, Someday/Maybe or Trashed.
-- źródło: UC-02
+- źródło: UC-03
 - status: draft
 
 ### CLR-02
 - wzorzec: event
 - tekst: When the User converts an Item into a Project, GTD-App shall require at least one Open Action for that Project.
-- źródło: UC-02
+- źródło: UC-03
 - status: draft
 
 ### CLR-03
 - wzorzec: unwanted
 - tekst: If the User attempts to save a Project without an Open Action, then GTD-App shall reject the operation and indicate the missing Open Action.
-- źródło: UC-02
+- źródło: UC-03
 - status: draft
 
 ### CLR-04

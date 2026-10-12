@@ -4,7 +4,12 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-Brak otwartych decyzji.
+| ID | Decyzja | Opcje | Propozycja |
+| --- | --- | --- | --- |
+| D-43 | Tabela wyników Doprecyzowania w UC-03 zamiast UC-02; CLR-01…03 ze źródłem UC-03 | A) zostawić · B) cofnąć | A |
+| D-44 | Element do istniejącego Projektu przy Doprecyzowaniu | A) opcjonalny wybór Projektu przy wynikach Następne działanie / Zaplanowane / Czekam na · B) przypisanie tylko później | A |
+| D-45 | Rozbicie Elementu na kilka | A) „Podziel” tworzy kilka Elementów W Inboxie · B) poza zakresem v1.0 | A |
+| D-46 | Pola obowiązkowe przy Doprecyzowaniu | A) tylko minimum (Data wykonania, Delegat, Rezultat + Otwarte działanie) · B) dodatkowo Kontekst dla Następnego działania | A |
 
 ## W kolejce
 
@@ -13,12 +18,11 @@ Brak otwartych decyzji.
 | K-07 | Pozycja wspólna dla kilku Działań |
 | K-08 | Ponowne odznaczenie Pozycji (np. zużyta) |
 | K-01 | Znaczenie „trwale zapisany” w przechwyceniu (UC-01) |
-| K-02 | Nowy przypadek użycia „Doprecyzować Element” (UC-03) |
 | K-03 | Cel „Zarządzać Kontekstami” na liście aktor–cel |
 | K-04 | Reguła „Element nie wraca do Inboxu” jako wymaganie EARS |
 | K-10 | Suspect links: flaga przeglądu po zmianie rodzica |
 | K-11 | Niezależny przegląd wymagań przez osobnego agenta |
-| K-12 | Lekka analiza ryzyka (scenariusze „co pójdzie źle”) |
+| K-12 | Lekka analiza ryzyka (scenariusze „co pójdzie źle”); odłożona przez Użytkownika 2026-10-12 |
 | K-13 | Identyfikatory ekranów (E-xx) w słowniku i ślad wymagań |
 
 ## Rozstrzygnięte

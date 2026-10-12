@@ -2,7 +2,7 @@
 
 Plik generowany przez slad.py; nie edytuj ręcznie (P-04).
 
-Wymagania: 25 · ze źródłem: 25 · z testem: 0 · błędy: 0 · ostrzeżenia: 2
+Wymagania: 25 · ze źródłem: 25 · z testem: 0 · błędy: 0 · ostrzeżenia: 1
 
 ## W górę: wymaganie → źródła
 
@@ -12,9 +12,9 @@ Wymagania: 25 · ze źródłem: 25 · z testem: 0 · błędy: 0 · ostrzeżenia:
 | CAP-02 | event | draft | UC-01 | — |
 | CAP-03 | unwanted | draft | UC-01 | — |
 | CAP-04 | event | draft | D-36 | — |
-| CLR-01 | event | draft | UC-02 | — |
-| CLR-02 | event | draft | UC-02 | — |
-| CLR-03 | unwanted | draft | UC-02 | — |
+| CLR-01 | event | draft | UC-03 | — |
+| CLR-02 | event | draft | UC-03 | — |
+| CLR-03 | unwanted | draft | UC-03 | — |
 | CLR-04 | ubiquitous | draft | D-33 | — |
 | CLR-05 | ubiquitous | draft | D-04 | — |
 | CLR-06 | state | draft | D-32 | — |
@@ -56,12 +56,11 @@ Wymagania: 25 · ze źródłem: 25 · z testem: 0 · błędy: 0 · ostrzeżenia:
 | G-ELM-13 | ENG-01 |
 | G-OPR-13 | REV-01 |
 | UC-01 | CAP-01, CAP-02, CAP-03 |
-| UC-02 | CLR-01, CLR-02, CLR-03, CAL-01 |
+| UC-02 | CAL-01 |
+| UC-03 | CLR-01, CLR-02, CLR-03 |
 | UC-04 | PRZ-02, PRZ-03 |
 | ZP-01 | PRJ-01 |
-| UC-03 | — |
 
 ## Błędy i ostrzeżenia
 
-- O1 UC-03: przypadek użycia bez wymagań
 - O2 25 z 25 wymagań bez testu (fala 4)

@@ -17,6 +17,17 @@ Użytkownik \[G-AKT-02\] przekazuje GTD-App \[G-AKT-01\] treść dowolnym Kanał
 
 Użytkownik \[G-AKT-02\] przegląda po kolei Elementy \[G-ELM-01\] w Stanie W Inboxie \[G-ELM-03\] i dla każdego wykonuje Doprecyzowanie \[G-OPR-04\] (UC-03). Każde Doprecyzowanie kończy się dokładnie jednym wynikiem, który zmienia Stan Elementu \[G-ELM-02\] na inny niż W Inboxie; Element nigdy nie wraca do Inboxu. Przypadek kończy się sukcesem, gdy Inbox jest Pusty \[G-ELM-15\]. Użytkownik może przerwać w dowolnym momencie: Elementy już doprecyzowane zachowują nowy Stan, pozostałe zostają W Inboxie.
 
+Możliwe wyniki Doprecyzowania opisuje UC-03.
+
+- *Gwarancja minimalna:* żaden Element nie zostaje utracony; każdy ma po przerwaniu albo nowy Stan, albo nadal W Inboxie.
+- *Kolejność:* GTD-App prezentuje Elementy od najstarszego (według chwili Przechwycenia \[G-OPR-02\]). Elementy przechwycone w trakcie (UC-01) dołączają na koniec bieżącego opróżniania.
+
+### UC-03 Doprecyzować Element
+
+*Poziom:* podfunkcja (ryba) · *Zakres:* G-AKT-01 GTD-App · *Aktor główny:* G-AKT-02 Użytkownik · *Zawierany przez:* UC-02, Przegląd tygodniowy \[G-OPR-13\] · *Warunek wstępny:* Element w Stanie W Inboxie \[G-ELM-03\]
+
+Użytkownik \[G-AKT-02\] rozpatruje jeden Element \[G-ELM-01\] w Stanie W Inboxie i wykonuje Doprecyzowanie \[G-OPR-04\]: rozstrzyga, czy Element wymaga działania, i wybiera dokładnie jeden wynik z tabeli poniżej. GTD-App pokazuje jako pierwszą, wyróżnioną opcję „Zrób teraz” \[G-OPR-05\] (D-33). Dla wyników wymagających danych GTD-App prosi tylko o minimum: Datę wykonania \[G-ATR-04\] dla Zaplanowane, Delegata \[G-AKT-03\] dla Czekam na, Rezultat \[G-PRJ-02\] i co najmniej jedno Otwarte działanie \[G-ELM-12\] dla Projektu. Kontekst \[G-ATR-01\], Szacowany czas \[G-ATR-02\], Wymagana energia \[G-ATR-03\] i Lista przygotowania \[G-PRZ-01\] są opcjonalne. Przypadek kończy się, gdy Element ma nowy Stan \[G-ELM-02\] albo stał się Projektem.
+
 | Wynik Doprecyzowania | Operacja | Stan końcowy |
 | --- | --- | --- |
 | Wykonane od razu (reguła 2 minut) | G-OPR-05 Wykonanie natychmiastowe | G-ELM-09 Zakończony |
@@ -28,12 +39,9 @@ Użytkownik \[G-AKT-02\] przegląda po kolei Elementy \[G-ELM-01\] w Stanie W In
 | Tylko informacja | G-OPR-04 Doprecyzowanie | G-ELM-08 Referencja |
 | Niepotrzebne | G-OPR-10 Przeniesienie do Kosza | G-ELM-10 W Koszu |
 
-- *Gwarancja minimalna:* żaden Element nie zostaje utracony; każdy ma po przerwaniu albo nowy Stan, albo nadal W Inboxie.
-- *Kolejność:* GTD-App prezentuje Elementy od najstarszego (według chwili Przechwycenia \[G-OPR-02\]). Elementy przechwycone w trakcie (UC-01) dołączają na koniec bieżącego opróżniania.
+- *Gwarancja minimalna:* anulowanie zostawia Element W Inboxie bez zmian; Element nie traci treści.
+- *Gwarancja sukcesu:* Element ma dokładnie jeden nowy Stan i nigdy nie wraca do Inboxu.
 
-### UC-03 Doprecyzować Element
-
-*Poziom:* podfunkcja (ryba) · *Zawierany przez:* UC-02, Przegląd tygodniowy \[G-OPR-13\] · *Status:* do napisania (K-02)
 
 ### UC-04 Przygotować Działanie
 
