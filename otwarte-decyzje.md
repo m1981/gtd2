@@ -4,7 +4,12 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-Brak otwartych decyzji.
+| ID | Decyzja | Opcje | Propozycja |
+| --- | --- | --- | --- |
+| D-48 | Szablon: jak powstaje repozytorium szablonowe | A) nowe repo od zera z uogólnionych plików gtd2 · B) wydzielenie z gtd2 (refaktor gtd2) | A |
+| D-49 | Szablon: język plików i reguł | A) polski; EARS i nazwy plików bez polskich znaków · B) całość po angielsku | A |
+| D-50 | Szablon: moduły dziedzinowe | A) katalog moduly/ kopiowany w razie potrzeby · B) wszystko w rdzeniu | A |
+| D-51 | Szablon: schematy ID | A) jeden plik narzedzia/id.toml czytany przez skrypty · B) wzorce w skryptach jak w gtd2 | A |
 
 ## W kolejce
 
