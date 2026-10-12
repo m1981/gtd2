@@ -1,8 +1,25 @@
 #!/bin/sh
-# Pre-commit GTD-App: sprawdza mapę nawigacji (reguły R1–R5 z nawigacja/sprawdz.py)
-# i to, czy nawigacja/mapa-nawigacji.html jest zbudowana z aktualnego ekrany.mmd.
+# Pre-commit GTD-App (AGENTS.md, P-05):
+#  1. ślad wymagań (slad.py) i aktualność slad.md,
+#  2. mapa nawigacji (reguły R1–R5 z nawigacja/sprawdz.py) i aktualność mapa-nawigacji.html.
 # Włączenie w nowym klonie: git config core.hooksPath .githooks
-cd "$(git rev-parse --show-toplevel)/nawigacja" || exit 1
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+tmp=$(mktemp)
+if ! python3 -B slad.py "$tmp" > "$tmp.log"; then
+  grep '^B' "$tmp.log"
+  echo
+  echo "pre-commit: ślad wymagań ma błędy (powyżej). Popraw wymagania.md lub odnośniki."
+  rm -f "$tmp" "$tmp.log"; exit 1
+fi
+if ! cmp -s "$tmp" slad.md; then
+  rm -f "$tmp" "$tmp.log"
+  echo "pre-commit: slad.md jest nieaktualny. Uruchom: python3 slad.py i dodaj plik do commita."
+  exit 1
+fi
+rm -f "$tmp" "$tmp.log"
+
+cd nawigacja || exit 1
 
 if ! python3 -B sprawdz.py ekrany.mmd > /dev/null; then
   python3 -B sprawdz.py ekrany.mmd | grep -E 'Reguła|---|UWAGA'

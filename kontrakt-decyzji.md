@@ -28,7 +28,7 @@ Każda decyzja ma dokładnie taki układ:
 - **B)** opcja
 - **C)** opcja (tylko jeśli istnieje realna trzecia droga)
 
-&#91;P\] = A — jedno zdanie, dlaczego tę opcję proponujesz.
+\[P\] = A — jedno zdanie, dlaczego tę opcję proponujesz.
 
 Zasady:
 
@@ -83,4 +83,4 @@ Zasady:
 
 ## Rejestry decyzji projektów
 
-- GTD-App: karta „Otwarte decyzje” w [dokumencie GTD-App](https://claude.ai/code/artifact/680a2cbf-766d-41d9-ae38-afdaa4e7c6b6)
+- GTD-App: `otwarte-decyzje.md` w repozytorium PycharmProjects/gtd2 (źródło prawdy od 2026-10-12, D-41)

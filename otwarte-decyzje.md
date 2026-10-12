@@ -1,16 +1,10 @@
 # Otwarte decyzje
 
-Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizowany po każdej odpowiedzi; identyfikatory D i K są niezmienne.
+Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizowany po każdej odpowiedzi; identyfikatory D i K są niezmienne. Źródło prawdy: ten plik (D-41).
 
 ## Otwarte
 
-| ID | Decyzja | Opcje | Propozycja |
-| --- | --- | --- | --- |
-| D-38 | Wymagania EARS w repo ze śladem w pre-commit | A) plik wymagań z ID, wzorcem EARS i polem „źródło”; macierz w obie strony generowana skryptem · B) odłożyć | A |
-| D-39 | Jednostronicowy plan projektu dla agenta | A) AGENTS.md w repo według szkicu z 2026-10-12 · B) zostać przy README i kontrakcie | A |
-| D-40 | Baseline na zamkniętym etapie | A) tag gita baseline-01-slownik-briefy · B) bez tagów | A |
-| D-41 | Jedno źródło prawdy | A) repozytorium dla wszystkich artefaktów; dokument jako widok · B) słownik i rejestr w dokumencie, reszta w repo | A |
-| D-42 | Zakres planu projektu | A) tylko etap specyfikacji · B) od razu także kod i testy | A |
+Brak otwartych decyzji.
 
 ## W kolejce
 
@@ -18,7 +12,6 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 | --- | --- |
 | K-07 | Pozycja wspólna dla kilku Działań |
 | K-08 | Ponowne odznaczenie Pozycji (np. zużyta) |
-| K-06 | Poprawka znacznika „\[P\]” w pliku kontraktu |
 | K-01 | Znaczenie „trwale zapisany” w przechwyceniu (UC-01) |
 | K-02 | Nowy przypadek użycia „Doprecyzować Element” (UC-03) |
 | K-03 | Cel „Zarządzać Kontekstami” na liście aktor–cel |
@@ -32,6 +25,11 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-42 | Zakres planu projektu | tylko etap specyfikacji (AGENTS.md) | 2026-10-12 |
+| D-41 | Jedno źródło prawdy | repozytorium gtd2 dla wszystkich artefaktów; dokumenty w Claude Docs jako archiwum | 2026-10-12 |
+| D-40 | Baseline na zamkniętym etapie | tag baseline-01-slownik-briefy | 2026-10-12 |
+| D-39 | Jednostronicowy plan projektu dla agenta | AGENTS.md | 2026-10-12 |
+| D-38 | Wymagania EARS w repo ze śladem w pre-commit | wymagania.md + slad.py + slad.md | 2026-10-12 |
 | D-37 | Skład paska nawigacji | Start · Inbox · Działania · Projekty · Konteksty · (+) Przechwyć (nawigacja/ekrany.mmd) | 2026-10-11 |
 | D-36 | Przechwyć (E-02) bez kroku naprzód | celowy wyjątek od ZP-01: przechwycenie ma być błyskawiczne | 2026-10-11 |
 | D-35 | Ekran „Projekt zakończony” (E-19) | wezwanie „Pokaż Projekty Utknięte” (G-OPR-09) | 2026-10-11 |
