@@ -6,11 +6,7 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Opcje | Propozycja |
 | --- | --- | --- | --- |
-| D-53 | Tryb powrotu do aplikacji | A) gtd2 samodzielnie na obecnym procesie, bez migracji na szablon iso-template-agent; proces rozwijany osobno · B) najpierw pilot szablonu na gtd2 · C) nowy projekt z copiera | A |
-| D-54 | Miejsce kodu | A) w gtd2 obok specyfikacji (src/, tests/) · B) od zera w osobnym repozytorium (repozytorium gtd pomijamy, Użytkownik 2026-11-11) | A |
-| D-55 | Pierwszy przyrost | A) UC-01 i UC-02: zatwierdzić ich wymagania, testy akceptacyjne, potem kod; wcześniej K-01 · B) najpierw pełna specyfikacja (fale 3–4) · C) inny wycinek | A |
-| D-56 | Technologia | A) lokalna aplikacja bez pracy offline; CAP-03 odłożone · B) od razu praca offline z synchronizacją · C) najpierw krótka analiza opcji wobec CAP-02 i CAP-03 | C |
-| D-58 | Wypchnięcie do m1981/gtd2 (zdalne ma niezwiązaną historię: jeden commit z README „# gtd2-iso”; repozytorium publiczne) | A) najpierw zmiana na prywatne, potem wypchnięcie z nadpisaniem tamtego commita (nieodwracalne na GitHubie) · B) to samo bez zmiany widoczności · C) scalenie obu historii (commit z README zostaje, nasz README wygrywa konflikt), bez nadpisywania | A |
+| D-56 | Technologia (w zgodzie z D-55) | A) aplikacja webowa instalowalna na telefonie (PWA), dane lokalnie w przeglądarce (IndexedDB), praca offline z natury; synchronizacja między urządzeniami w kolejnym przyroście · B) aplikacja natywna na telefon (np. Flutter): pełne Kanały przechwycenia (widżet, udostępnianie), więcej pracy · C) lokalna aplikacja Python w przeglądarce na komputerze: najszybszy start, nie spełnia CAP-03 i nie działa w telefonie | A, rozstrzygnąć po ocenie makiet (D-55) |
 
 ## W kolejce
 
@@ -30,6 +26,10 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-58 | Wypchnięcie do m1981/gtd2 | B — commit z README „# gtd2-iso” nadpisany (push --force), repozytorium publiczne; origin na laptopie przez SSH; tag baseline-01-slownik-briefy do wypchnięcia z Maca (z chmury serwer odrzuca tagi) | 2026-11-11 |
+| D-55 | Pierwszy przyrost | wariant Użytkownika: najpierw makiety ekranów z przykładami (specification by example, Gojko Adzic) do oceny wygody przez Użytkownika; zatwierdzanie wymagań, testy i kod po ocenie. Makiety: projekt Design „GTD-App — makiety i przykłady” w claude.ai (13 ekranów, pytania przy każdym) | 2026-11-11 |
+| D-54 | Miejsce kodu | A — kod w gtd2 obok specyfikacji (src/, tests/); repozytorium gtd pomijamy; zastępuje zakres z D-42 | 2026-11-11 |
+| D-53 | Tryb powrotu do aplikacji | A — gtd2 samodzielnie na obecnym procesie, bez migracji na szablon iso-template-agent; proces rozwijany osobno | 2026-11-11 |
 | D-57 | Kopia zapasowa i porządek | A — kopia na GitHubie w m1981/gtd2 (dawne gtd2-iso); przypadkowe „cc” w przypadki-uzycia.md usunięte; zapis sesji REF w doc/sessions/ dodany; sposób wypchnięcia: D-58 | 2026-11-11 |
 | D-52 | Szablon: model śladu | model z uzupełnieniami; przeniesione do ai-sldc-template jako D-06 | 2026-10-13 |
 | D-51 | Szablon: schematy ID | narzedzia/id.toml; przeniesione do ai-sldc-template jako D-05 | 2026-10-13 |

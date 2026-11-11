@@ -3,7 +3,7 @@
 Przeczytaj na start każdej sesji. Kontrakt decyzji (kontrakt-decyzji.md) obowiązuje zawsze.
 
 ## Zakres
-Specyfikacja wymagań GTD-App v1.0 dla jednego Użytkownika. Bez kodu i bez certyfikacji (D-42).
+Specyfikacja i implementacja GTD-App v1.0 dla jednego Użytkownika, bez certyfikacji (D-53, D-54; zastępuje D-42). Przed kodem: ocena makiet z przykładami (D-55) i wybór technologii (D-56).
 
 ## Artefakty i źródła prawdy
 P-01 Repozytorium jest jedynym źródłem prawdy dla wszystkich artefaktów (D-41).
