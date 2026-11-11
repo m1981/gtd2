@@ -4,7 +4,13 @@ Rejestr decyzji projektu GTD-App prowadzony według Kontraktu decyzji. Aktualizo
 
 ## Otwarte
 
-Brak otwartych decyzji.
+| ID | Decyzja | Opcje | Propozycja |
+| --- | --- | --- | --- |
+| D-53 | Tryb powrotu do aplikacji | A) gtd2 samodzielnie na obecnym procesie, bez migracji na szablon iso-template-agent; proces rozwijany osobno · B) najpierw pilot szablonu na gtd2 · C) nowy projekt z copiera | A |
+| D-54 | Miejsce kodu | A) w gtd2 obok specyfikacji (src/, tests/) · B) od zera w osobnym repozytorium (repozytorium gtd pomijamy, Użytkownik 2026-11-11) | A |
+| D-55 | Pierwszy przyrost | A) UC-01 i UC-02: zatwierdzić ich wymagania, testy akceptacyjne, potem kod; wcześniej K-01 · B) najpierw pełna specyfikacja (fale 3–4) · C) inny wycinek | A |
+| D-56 | Technologia | A) lokalna aplikacja bez pracy offline; CAP-03 odłożone · B) od razu praca offline z synchronizacją · C) najpierw krótka analiza opcji wobec CAP-02 i CAP-03 | C |
+| D-58 | Wypchnięcie do m1981/gtd2 (zdalne ma niezwiązaną historię: jeden commit z README „# gtd2-iso”; repozytorium publiczne) | A) najpierw zmiana na prywatne, potem wypchnięcie z nadpisaniem tamtego commita (nieodwracalne na GitHubie) · B) to samo bez zmiany widoczności · C) scalenie obu historii (commit z README zostaje, nasz README wygrywa konflikt), bez nadpisywania | A |
 
 ## W kolejce
 
@@ -24,6 +30,7 @@ Brak otwartych decyzji.
 
 | ID | Decyzja | Wybór | Data |
 | --- | --- | --- | --- |
+| D-57 | Kopia zapasowa i porządek | A — kopia na GitHubie w m1981/gtd2 (dawne gtd2-iso); przypadkowe „cc” w przypadki-uzycia.md usunięte; zapis sesji REF w doc/sessions/ dodany; sposób wypchnięcia: D-58 | 2026-11-11 |
 | D-52 | Szablon: model śladu | model z uzupełnieniami; przeniesione do ai-sldc-template jako D-06 | 2026-10-13 |
 | D-51 | Szablon: schematy ID | narzedzia/id.toml; przeniesione do ai-sldc-template jako D-05 | 2026-10-13 |
 | D-50 | Szablon: moduły dziedzinowe | katalog moduly/; przeniesione do ai-sldc-template jako D-04 | 2026-10-13 |
